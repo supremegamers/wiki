@@ -5,6 +5,8 @@ taxonomy:
         - docs
 ---
 
+### Chapter 1
+
 # Android-x86
 
-## Move ahead to the next page to start this chapter
+Move ahead to the next page to start this chapter
