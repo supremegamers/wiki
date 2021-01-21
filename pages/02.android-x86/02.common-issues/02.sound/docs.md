@@ -1,5 +1,5 @@
 ---
-title: 'Sound issues'
+title: Sound
 taxonomy:
     category:
         - docs
