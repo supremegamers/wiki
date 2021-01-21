@@ -1,5 +1,8 @@
 ---
 title: Home
+taxonomy:
+    category:
+        - docs
 ---
 
 # Welcome to SG Wiki!
