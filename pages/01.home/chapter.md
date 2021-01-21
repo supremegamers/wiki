@@ -15,4 +15,4 @@ title: Home
 * And many other things!
 
 !!!! Check the left sidebar to find what you need!
-!!!! You should read all the docs carefully unless you wanna run into trouble, we won't care to help you at all if you don't. So mind it!
+!!!! **You should read all the docs carefully** unless you wanna run into trouble, we won't care to help you at all if you don't. So mind it!
