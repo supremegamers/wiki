@@ -1,5 +1,5 @@
 ---
-title: 'Booting issues'
+title: Booting
 taxonomy:
     category:
         - docs
