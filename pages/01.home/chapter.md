@@ -4,7 +4,7 @@ title: Home
 
 # Welcome to SG Wiki!
 
-### Exclusively for Android-x86 related topics
+### Exclusive for Android-x86 related topics
 
 ##### Here you can find very detailed guides for it, such as:
 
