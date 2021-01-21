@@ -6,3 +6,5 @@ taxonomy:
 ---
 
 # Android-x86
+
+## Move ahead to the next page to start this chapter
