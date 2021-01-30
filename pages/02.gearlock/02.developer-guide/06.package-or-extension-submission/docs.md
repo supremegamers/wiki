@@ -1,5 +1,8 @@
 ---
 title: 'Package or Extension submission'
+taxonomy:
+    category:
+        - docs
 ---
 
 Successfully made your very own **GearLock** Package or Extension ?
