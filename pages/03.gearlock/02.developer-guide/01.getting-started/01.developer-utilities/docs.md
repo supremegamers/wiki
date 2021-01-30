@@ -1,5 +1,8 @@
 ---
 title: 'Developer utilities'
+taxonomy:
+    category:
+        - docs
 ---
 
 Introduction
