@@ -140,7 +140,7 @@ Example: gearboot s2 # For executing post-fs-data executables
 + Take a look at [environment variables][Env-Vars]
 + Must check out [GearLock Dev Utilities][GearLock-Dev-Utils]
 
-[GetStarted]: https://supreme-gamers.com/gearlock
+[GetStarted]: get-started
 [custom-core-pkg]: https://supreme-gamers.com/gearlock/#custom-core-package
 [GearLock-Dev-Utils]: https://supreme-gamers.com/gearlock/gearlock-dev-utils
 [Env-Vars]: https://supreme-gamers.com/gearlock/environment-variables
