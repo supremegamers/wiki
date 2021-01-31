@@ -145,4 +145,4 @@ Although, you could also boot into your OS and use the `gearlock-installer` exec
 
 
 
-[Ghome-Var]: https://supreme-gamers.com/gearlock/environment-variables#ghome
+[Ghome-Var]: ../environment-variables#ghome
