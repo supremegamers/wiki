@@ -1,5 +1,5 @@
 ---
-title: 'Installing GXP''s and ZIP''s'
+title: 'Installing or Uninstalling GXP''s and ZIP''s'
 taxonomy:
     category:
         - docs
