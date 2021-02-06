@@ -15,7 +15,7 @@ Simply head over to [this](https://supreme-gamers.com/r/gearlock-custom-recovery
 
 ### Place the binary anywhere inside android filesystem
 
-In this guide we will copy `gearlock` installer-binary at either **Main Storage** or **Internal Storage** or **/sdcard** from a file manager.
+In this guide we will copy `gearlock` installer-binary to either **Main Storage** or **Internal Storage** or **/sdcard** from a file manager.
 
 I'm using [FX File Explorer](https://fx-file-explorer.en.uptodown.com/android) for moving `gearlock` installer-binary to **Main Storage** (aka the **Internal Storage**) from my **Downloads** folder.
 
