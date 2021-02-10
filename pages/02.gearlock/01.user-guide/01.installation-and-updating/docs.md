@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: 'Installation and Updating'
 media_order: download_gearlock_step.png
 taxonomy:
     category:
@@ -45,6 +45,14 @@ So, at this stage you should have the installer-binary running. I have my androi
 ### Installation complete
 
 Congrats, you have successfully installed GearLock. Now you should check the next pages in this chapter to learn about the amazing things you can do with it :)
+
+# Updating
+
+You will get notified in GearLock when there is a new update available.
+
+You will be able to update directly from `GearLock > metro > more > Updater`
+
+You can also follow the same instructions of **Installing GearLock** as described in the beginning of this page to perform a update over an existing version and the old version will be overwritten. 
 
 # Video guides
 
