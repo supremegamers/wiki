@@ -1,5 +1,5 @@
 ---
-title: 'Wifi and ethernet'
+title: 'Wifi and Ethernet'
 taxonomy:
     category:
         - docs
