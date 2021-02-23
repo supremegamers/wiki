@@ -1,5 +1,5 @@
 ---
-title: 'Kernel facts'
+title: 'Kernel and Mesa facts'
 taxonomy:
     category:
         - docs
