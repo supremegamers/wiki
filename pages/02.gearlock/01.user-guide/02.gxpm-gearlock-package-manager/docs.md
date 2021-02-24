@@ -1,5 +1,5 @@
 ---
-title: 'GXPM - GearLock Extension Package Manager'
+title: 'gxpm - The GearLock Package Manager'
 taxonomy:
     category:
         - docs
