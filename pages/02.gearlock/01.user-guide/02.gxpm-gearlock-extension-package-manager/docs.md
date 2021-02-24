@@ -1,5 +1,5 @@
 ---
-title: 'Installing or Uninstalling GXP''s and ZIP''s'
+title: 'GXPM - GearLock Extension Package Manager'
 taxonomy:
     category:
         - docs
