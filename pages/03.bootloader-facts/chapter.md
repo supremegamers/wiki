@@ -1,13 +1,13 @@
 ---
-title: Bootloader
+title: 'Bootloader facts'
 taxonomy:
     category:
         - docs
-published: true
 ---
 
-### Chapter
+# Introduction
 
-# BootLoader 101
+Hmm....
 
-Let's get started ...
+
+# More context ...
