@@ -5,9 +5,6 @@ taxonomy:
         - docs
 ---
 
-# Introduction
+### Chapter
 
-Hmm....
-
-
-# More context ...
+# Bootloader 101
