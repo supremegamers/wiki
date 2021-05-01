@@ -1,5 +1,5 @@
 ---
-title: 'Bootloader facts'
+title: 'Bootloader'
 taxonomy:
     category:
         - docs

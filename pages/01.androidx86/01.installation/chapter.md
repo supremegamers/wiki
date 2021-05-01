@@ -5,4 +5,8 @@ taxonomy:
         - docs
 ---
 
-Need to write and even more pages ...
+### Chapter
+
+# Android-x86 Installation
+
+Let's get started ...
