@@ -73,10 +73,13 @@ grub-install  /dev/sda --target=i386-efi --boot-directory=/mnt/grub/boott -efi-d
 grub-install /dev/sda --target=x86_64-efi --boot-directory=/mnt/grub/boott -efi-directory=/mnt/grub --removable
 ```
 Note: 
-1 Here `/mnt/grub` is the EFI partition of the disk. In case if its installed on same disk as where Linux is, it is usually mounted on `/boot/efi`
 
-2 `i386-pc` for legacy system, `i386-efi` for 32bit EFI system, `x86_64-efi` for 64bit EFI system. If the target partition is removable drive like USB, add  --removable.
+1. Here `/mnt/grub` is the EFI partition of the disk. In case if its installed on same disk as where Linux is, it is usually mounted on `/boot/efi`
 
-3 Index of drives can be found in `diskmgmt.msc` in start menu for windows
+2. `i386-pc` for legacy system, `i386-efi` for 32bit EFI system, `x86_64-efi` for 64bit EFI system. If the target partition is removable drive like USB, add  --removable.
+
+3. Index of drives can be found in `diskmgmt.msc` in start menu for windows
+
+## Finally!!
 
 And thats it! We have successfully installed grub. But by default grub doesn't generate any configuration file. This file is easy to generate in Linux but not so in windows(Lazy). On next page, we will learn how to configure grub configuration file. Now if you try to boot grub, it will stop at grub shell if installation was successful. Else it will stop at grub-rescue shell which has only some basic functionality to fix and reach the shell.
