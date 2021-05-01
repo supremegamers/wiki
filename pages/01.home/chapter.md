@@ -1,5 +1,5 @@
 ---
-title: Android-x86
+title: Home
 taxonomy:
     category:
         - docs
