@@ -8,7 +8,7 @@ taxonomy:
 Due to how Android-x86 is structured it can be installed in any system. It mainly depends if the boot-loader can boot the system from that File-System. 
 Here we are gonna learn how to Install Android-x86 on NTFS. But the process is similar in any File-System.
 
-# Installing Android-x86 on any file-system
+# Installing on any file-system
 
 ## Preparation
 
@@ -44,4 +44,4 @@ Now the last part. Install Grub2win from [here](https://sourceforge.net/projects
 ![image](entry.png)
 
 
-# Installing Android-x86 on ext file-systems (Advanced)
+# Installing on ext file-systems (Advanced)
