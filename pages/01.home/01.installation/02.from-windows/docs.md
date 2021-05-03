@@ -1,15 +1,14 @@
 ---
-title: OtherFS
+title: 'From windows'
 taxonomy:
     category:
         - docs
 ---
 
-# Installation of Android-x86 on any File-SystemManually
+Due to how Android-x86 is structured it can be installed in any system. It mainly depends if the boot-loader can boot the system from that File-System. 
+Here we are gonna learn how to Install Android-x86 on NTFS. But the process is similar in any File-System.
 
-Due to how Android-x86 is structured it can be installed in any system. It mainly depends if the boot-loader can boot the system from that File-System. Here we are gonna learn how to Install Android-x86 on NTFS. But the process is similar in any File-System.
-
-
+# Installing Android-x86 on any file-system
 
 ## Preparation
 
@@ -21,7 +20,6 @@ To install Android-x86 we are gonna need 3 things.
 
 3. A tool to create the data.img (For example [makeData](https://mega.nz/file/VxggALRD#_q4_JkkpTe-2s9-1nbI9v_bkwMeDyMmG2DYHLd4G5FY)).
 
-   
 
 ## Step-1 The Android-x86 Folder
 
@@ -46,9 +44,4 @@ Now the last part. Install Grub2win from [here](https://sourceforge.net/projects
 ![image](entry.png)
 
 
-
-## Finished!! Not Yet
-
-Yes we are not done yet. I wasted a year to make this Wi-Ki. So would really appreciate a cup of coffee or some money :)
-
-If your not interested than yes we are finished. Have some nightmares for not supporting the free services.
+# Installing Android-x86 on ext file-systems (Advanced)
