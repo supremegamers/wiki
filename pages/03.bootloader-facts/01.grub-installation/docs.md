@@ -1,5 +1,8 @@
 ---
 title: 'Grub Installation'
+taxonomy:
+    category:
+        - docs
 ---
 
 Here we are gonna learn how to install grub from both Windows and Linux. Please note that it is recommended to know how to use terminal or CMD and basic knowledge of partition in order to install grub. If you don't know how, consider switching to Grub2Win.
