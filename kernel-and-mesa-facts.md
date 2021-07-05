@@ -11,7 +11,9 @@ Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displayin
 
 The hud is part of Mesa, so if you’re using the open-source drivers you’re ready to use it without any external package."
 
-> Source : https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/
+!!!primary Source
+https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/
+!!!
 
 On Android-x86, Gallium HUD can be enabled on Mesa 18.1+ if you are using AMD GPUs or Nvidia GPUs (nouveau). On Intel GPUs, Gallium HUD can be enabled on Gen8+ using Mesa's new `iris` graphic driver. On older Intel GPUs, with the new `crocus` driver you can now be able to use it too.
 
