@@ -6,6 +6,8 @@
     "label": "Wiki"
   },
 
+  "favicon": "static/favicon.png",
+
   "edit": {
     "repo": "https://github.com/supremegamers/wiki",
     "branch": "main"
