@@ -1,5 +1,6 @@
 ---
 label: Welcome
+description: A wiki by the SupremeGamers community enriched with various guides and docs
 icon: home
 order: 0
 ---
