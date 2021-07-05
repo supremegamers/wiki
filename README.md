@@ -12,7 +12,7 @@ order: 0
 ##### Here you can find very detailed guides for it, such as:
 
 - [ ] Android-x86 installation in various ways
-- [x] Troubleshooting common android-x86 bugs
+- [ ] Troubleshooting common android-x86 bugs
 - [ ] Special development tips and guides for developers
 - [x] User and developer guides for GearLock recovery
 - [ ] And many other cool things!
