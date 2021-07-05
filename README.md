@@ -27,3 +27,8 @@ Check the left sidebar to find what you need!
 Want to suggest/propose imporvements to this Wiki? Simply click on 📝 `Edit this page` button over any page on our [Wiki](https://wiki.supreme-gamers.com).
 
 Create a pull request once you have made your edits via Github.
+
+If you are new to markdown or if you want to rice up your text then please check the following links for refernece:
+
+- [Markdown basics](https://www.markdownguide.org/basic-syntax/)
+- [Additional styling components](https://retype.com/components/)
