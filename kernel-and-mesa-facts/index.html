@@ -8,19 +8,19 @@
     <!-- Primary Meta Tags -->
     <title>Kernel and Mesa facts</title>
     <meta name="title" content="Kernel and Mesa facts">
-    <meta name="description" content="Work-in-progress" />
+    <meta name="description" content="\" it’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="/kernel-and-mesa-facts/">
     <meta property="og:title" content="Kernel and Mesa facts">
-    <meta property="og:description" content="Work-in-progress">
+    <meta property="og:description" content="\" it’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/kernel-and-mesa-facts/">
     <meta property="twitter:title" content="Kernel and Mesa facts">
-    <meta property="twitter:description" content="Work-in-progress">
+    <meta property="twitter:description" content="\" it’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -192,7 +192,44 @@
         <span>Kernel and Mesa facts</span>
     </h1>
 </doc-anchor-target>
-<p>Work-in-progress</p>
+<doc-anchor-target id="gallium-hud">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gallium-hud">#</doc-anchor-trigger>
+        <span>Gallium HUD</span>
+    </h2>
+</doc-anchor-target>
+<p>&quot; it’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.</p>
+<p>The hud is part of Mesa, so if you’re using the open-source drivers you’re ready to use it without any external package.&quot;</p>
+<blockquote>
+<p>Source : <a href="https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/">https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/</a></p>
+</blockquote>
+<p>Gallium HUD can be enabled on Mesa 18.1+ if you are using AMD GPUs or Nvidia GPUs (nouveau). On Intel GPUs, Gallium HUD can be enabled on Gen8+ using Mesa&#x27;s new iris graphic driver. On older Intel GPUs, with the new crocus driver you can now be able to use it too.</p>
+<p>For all Intel GPUs I recommend using the upcoming Mesa 21.2 if you want to try to experience this feature.<br />
+If you wonder which Intel GPU you are using (different from CPU gen) then you can check this wikipedia page : <a href="https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units">https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units</a></p>
+<p>To easily activate Gallium HUD on any Android-x86 build, go to <code v-pre>/system/etc/init/surfaceflinger.rc</code></p>
+<p>&lt;image_placeholder&gt;</p>
+<p>Add this line into the file :</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">  setenv GALLIUM_HUD &lt;value&gt;</code></pre>
+</doc-codeblock></div>
+<p>This is the main environment variable to activate the hud.</p>
+<p>There are other optional variables you can set as well</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">  setenv GALLIUM_HUD_PERIOD &lt;value&gt; //sets the HUD update rate in seconds. Use zero to update every frame.
+  setenv GALLIUM_HUD_SCALE &lt;value&gt; //Scale HUD by an integer factor, for high DPI displays. Default is 1.
+  setenv GALLIUM_HUD_DUMP_DIR &lt;value&gt; //specifies a directory for writing the displayed HUD values into files. (aka dump fps or some info into a file)</code></pre>
+</doc-codeblock></div>
+<p>To know which value to set in each variables, you can read this post as a reference, it shows very detail about how you can customize the HUD.<br />
+<a href="https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/">https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/</a></p>
+<p><em><strong>NOTE : There seems to be no document relate to <code v-pre>GALLIUM_HUD_SCALE</code> so please report to us if you know how to use it</strong></em></p>
+<p>For example, these are the variables I use</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">    setenv GALLIUM_HUD cpu+fps
+    setenv GALLIUM_HUD_PERIOD 0.1</code></pre>
+</doc-codeblock></div>
+<p>After decide which one to use and customize your own HUD, save the edit and then reboot.</p>
+<p>You will see the HUD on the position you set (default is on the left side)</p>
+<p>&lt;image_placeholder&gt;</p>
 
 
 
