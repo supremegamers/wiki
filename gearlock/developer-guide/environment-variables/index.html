@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-cache-control" content="no-cache">
+
+    <!-- Primary Meta Tags -->
+    <title>Environment Variables</title>
+    <meta name="title" content="Environment Variables">
+    <meta name="description" content="The GearLock environment variables can be used to access some common data. You must keep in mind that these are only useable during GearLock or..." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/gearlock/developer-guide/environment-variables/">
+    <meta property="og:title" content="Environment Variables">
+    <meta property="og:description" content="The GearLock environment variables can be used to access some common data. You must keep in mind that these are only useable during GearLock or...">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/gearlock/developer-guide/environment-variables/">
+    <meta property="twitter:title" content="Environment Variables">
+    <meta property="twitter:description" content="The GearLock environment variables can be used to access some common data. You must keep in mind that these are only useable during GearLock or...">
+    
+    <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
+
+    <link href="/resources/css/retype.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/resources/js/config.js" defer></script>
+    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
+</head>
+    <body>
+        <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+    <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+
+    <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+    <div class="container relative flex items-center justify-between flex-grow pr-6 md:justify-start">
+        <!-- Mobile menu button skeleton -->
+        <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center flex-shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px flex-shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+        <div v-cloak id="docs-sidebar-toggle"></div>
+
+        <!-- Logo -->
+        <div class="flex items-center justify-between h-full py-2 md:w-75">
+            <div class="flex items-center px-2 md:px-6">
+                <a id="docs-site-logo" href="/" class="flex items-center leading-snug text-xl">
+                    <span class="dark:text-white font-semibold line-clamp-1 md:line-clamp-2">SupremeGamers</span>
+                </a><span class="hidden px-2 py-1 ml-4 text-sm font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-sm md:inline-block">Wiki</span>
+            </div>
+
+            <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+        </div>
+
+        <div class="flex justify-between md:flex-grow">
+            <!-- Top Nav -->
+            <nav class="hidden md:flex">
+    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://supreme-gamers.com">Forum</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://supreme-gamers.com/discord/invite">Discord</a>
+        </li>
+        <li class="md:mr-6">
+            <a class="block py-2 text-sm text-gray-400 whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="https://www.youtube.com/c/SupremeGamers">Youtube</a>
+        </li>
+    </ul>
+</nav>
+
+            <!-- Header Right Skeleton -->
+            <div v-cloak class="flex justify-end flex-grow skeleton">
+
+                <!-- Search input mock -->
+                <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                    <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                    </div>
+
+                    <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                </div>
+
+                <!-- Mobile search button mock -->
+                <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                </div>
+
+                <!-- Dark mode switch placehokder -->
+                <div class="w-10 h-10 lg:ml-2"></div>
+
+                <!-- History button mock -->
+                <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation"  style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                </div>
+            </div>
+
+            <div v-cloak class="flex items-center justify-end flex-grow">
+                <div id="docs-mobile-search-button"></div>
+                <doc-search-desktop></doc-search-desktop>
+
+                <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                <doc-history></doc-history>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+<div v-cloak class="fixed flex flex-col flex-shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+
+    <!-- Render this div, if config.showSidebarFilter is `true` -->
+    <div class="flex items-center h-16 px-6">
+        <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter" />
+    </div>
+
+    <div class="pl-6 mb-4 mt-1">
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+        <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+    </div>
+
+    <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
+        <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+    </div>
+</div>
+
+<!-- Sidebar component -->
+<doc-sidebar v-cloak>
+    <template #sidebar-footer>
+        <div
+            class="flex-shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650"
+        >
+
+            <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                <nav>
+                    <ul class="flex flex-wrap justify-center items-center">
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://supreme-gamers.com">Forum</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://supreme-gamers.com/discord/invite">Discord</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="block py-1 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://www.youtube.com/c/SupremeGamers">Youtube</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    target="_blank"
+    href="https://retype.com/"
+    rel="noopener"
+>
+    <span class="text-xs whitespace-nowrap">Powered by</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+</a>
+
+        </div>
+    </template>
+</doc-sidebar>
+
+
+        <div class="flex-grow min-w-0 dark:bg-dark-850">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+            <div class="flex">
+    <div class="flex-grow min-w-0 px-6 md:px-16">
+        <main class="relative pt-6 pb-16">
+            <div class="docs-markdown" id="docs-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="docs-sidebar-right-toggle"></div>
+               
+                <!-- Page content  -->
+<doc-anchor-target id="environment-variables" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#environment-variables">#</doc-anchor-trigger>
+        <span>Environment Variables</span>
+    </h1>
+</doc-anchor-target>
+<doc-anchor-target id="introduction">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#introduction">#</doc-anchor-trigger>
+        <span>Introduction</span>
+    </h2>
+</doc-anchor-target>
+<p>The GearLock environment variables can be used to access some common data.<br />
+You must keep in mind that these are only useable during GearLock or GearBoot runtime.</p>
+<doc-anchor-target id="variables">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#variables">#</doc-anchor-trigger>
+        <span>Variables</span>
+    </h2>
+</doc-anchor-target>
+<p>*Global ones are available on both GearLock &amp; GearBoot</p>
+<table class="comfortable">
+<thead>
+<tr>
+<th>Global</th>
+<th>GearLock Only</th>
+<th>GearBoot only</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GRROOT</td>
+<td></td>
+<td>GBRUNTIME</td>
+<td></td>
+</tr>
+<tr>
+<td>GTMP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ANDROID_VER</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SDK</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DATE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>DEPDIR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>STATDIR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GRROOT_DIR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GRLOAD</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GBDIR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GHOME</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>RECOVERY</td>
+<td>IT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>HOST_ARCH</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>BOOTCOMP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>KERNEL_IMAGE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GEARLOCK_RC</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TERMINAL_EMULATOR</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GEARLOCK_APP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>GEARLOCK_VER</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<doc-anchor-target id="grroot_dir">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#grroot_dir">#</doc-anchor-trigger>
+        <span>GRROOT_DIR</span>
+    </h2>
+</doc-anchor-target>
+<p>This is the place where GearBoot mounts the <code v-pre>android-x86</code> OS partition.</p>
+<p>On calling this var it will return <code v-pre>/gearlock/gearroot</code></p>
+<doc-anchor-target id="grroot">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#grroot">#</doc-anchor-trigger>
+        <span>GRROOT</span>
+    </h2>
+</doc-anchor-target>
+<p>This is the place where the actual <code v-pre>android-x86</code> OS files exist.</p>
+<p>By this I mean the place where you find files like <code v-pre>initrd.img</code> <code v-pre>ramdisk.img</code> <code v-pre>kernel</code></p>
+<p>On calling this var it will return the directory path where the actual OS files exist.</p>
+<doc-anchor-target id="host_arch">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#host_arch">#</doc-anchor-trigger>
+        <span>HOST_ARCH</span>
+    </h2>
+</doc-anchor-target>
+<p>On calling this var it returns either <code v-pre>x86</code> or <code v-pre>x86_64</code></p>
+<p>Note: This is not 100% accurate since it&#x27;s depended on lib64 dir existence. (A better implementaion is suggested)</p>
+<doc-anchor-target id="android_ver">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#android_ver">#</doc-anchor-trigger>
+        <span>ANDROID_VER</span>
+    </h2>
+</doc-anchor-target>
+<p>Return&#x27;s android version code, like 7.1/8.0/9.0 ++</p>
+<p><strong>Note:</strong> It&#x27;s based on <code v-pre>ro.build.version.sdk</code></p>
+<doc-anchor-target id="sdk">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sdk">#</doc-anchor-trigger>
+        <span>SDK</span>
+    </h2>
+</doc-anchor-target>
+<p>Return&#x27;s the SDK version code.</p>
+<doc-anchor-target id="gbruntime">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gbruntime">#</doc-anchor-trigger>
+        <span>GBRUNTIME</span>
+    </h2>
+</doc-anchor-target>
+<p>The value of this var is set to <code v-pre>yes</code> when <code v-pre>GearBoot</code> is running during boot. Otherwise it&#x27;s empty.</p>
+<p>Example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">echo $GBRUNTIME</code></pre>
+</doc-codeblock></div>
+<p>Output: <code v-pre>yes</code></p>
+<doc-anchor-target id="date">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date">#</doc-anchor-trigger>
+        <span>DATE</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns current date.</p>
+<doc-anchor-target id="year">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#year">#</doc-anchor-trigger>
+        <span>YEAR</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns current year.</p>
+<doc-anchor-target id="ghome">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ghome">#</doc-anchor-trigger>
+        <span>GHOME</span>
+    </h2>
+</doc-anchor-target>
+<p><code v-pre>ghome</code> is the place where GearLock stores extensions, gearboot scripts, common dependencie directory, status log files. It also contains the <code v-pre>.gearlockrc</code></p>
+<p>If gearlock came pre-installed into your system then <code v-pre>$GHOME</code> path should be <code v-pre>/system/ghome</code><br><br />
+While if it was a manual installation then <code v-pre>$GHOME</code> path should be <code v-pre>/data/ghome</code><br />
+Note: It doesn&#x27;t matter even if you move swap it between <code v-pre>/system</code> &amp; <code v-pre>/data</code>.</p>
+<p>Other vars depended on <code v-pre>$GHOME</code> &gt;</p>
+<ul>
+<li><code v-pre>DEPDIR=$GHOME/dependencies</code></li>
+<li><code v-pre>STATDIR=$GHOME/status</code></li>
+<li><code v-pre>GBDIR=$GHOME/gearboot</code></li>
+</ul>
+<doc-anchor-target id="gtmp">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gtmp">#</doc-anchor-trigger>
+        <span>GTMP</span>
+    </h2>
+</doc-anchor-target>
+<p><code v-pre>$GTMP</code> path is <code v-pre>/gearlock/tmp</code></p>
+<p>This place is temporary and gets cleaned up on boot.<br></p>
+<p>Only use this for storing small temp files if you want to use this place.</p>
+<doc-anchor-target id="grldir">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#grldir">#</doc-anchor-trigger>
+        <span>GRLDIR</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns the path for <code v-pre>gearload</code> directory</p>
+<doc-anchor-target id="recovery">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recovery">#</doc-anchor-trigger>
+        <span>RECOVERY</span>
+    </h2>
+</doc-anchor-target>
+<p>When the user is running <strong>GearLock</strong> in early <strong>Recovery</strong> mode this is set to <strong>yes</strong>. Otherwise it&#x27;s empty.</p>
+<doc-anchor-target id="it">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#it">#</doc-anchor-trigger>
+        <span>IT</span>
+    </h2>
+</doc-anchor-target>
+<p>The interface which is being used. From either classic or metro.</p>
+<doc-anchor-target id="bootcomp">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bootcomp">#</doc-anchor-trigger>
+        <span>BOOTCOMP</span>
+    </h2>
+</doc-anchor-target>
+<p>Is <code v-pre>yes</code> or not empty once the OS has completely landed on GUI. Otherwise it returns <code v-pre>no</code>.</p>
+<doc-anchor-target id="kernel_image">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#kernel_image">#</doc-anchor-trigger>
+        <span>KERNEL_IMAGE</span>
+    </h2>
+</doc-anchor-target>
+<p>Full accessible path to currently booted kernel image.</p>
+<doc-anchor-target id="gearlock_rc">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gearlock_rc">#</doc-anchor-trigger>
+        <span>GEARLOCK_RC</span>
+    </h2>
+</doc-anchor-target>
+<p>Full path to <code v-pre>.gearlockrc</code> file within <code v-pre>$GHOME</code>.</p>
+<doc-anchor-target id="terminal_emulator">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#terminal_emulator">#</doc-anchor-trigger>
+        <span>TERMINAL_EMULATOR</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns <code v-pre>yes</code> when the user is using GearLock from within the GUI (Except tty) throough some terminal emulation application. (This includes <code v-pre>$GEARLOCK_APP</code> also). Otherwise it returns <code v-pre>no</code>.</p>
+<doc-anchor-target id="gearlock_app">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gearlock_app">#</doc-anchor-trigger>
+        <span>GEARLOCK_APP</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns <code v-pre>yes</code> when GearLock terminal application is running. Otherwise it returns <code v-pre>no</code>.</p>
+<doc-anchor-target id="gearlock_ver">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gearlock_ver">#</doc-anchor-trigger>
+        <span>GEARLOCK_VER</span>
+    </h2>
+</doc-anchor-target>
+<p>Returns GearLock version code.</p>
+
+
+
+
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results />
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between mt-14">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/blob/website/gearlock/developer-guide/environment-variables.md" target="_blank" rel="noopener">
+        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        <span>Edit this page</span>
+    </a>
+
+    <!--<p class="my-2.5 text-gray-500 dark:text-dark-350 text-sm">Last updated on <strong>2021-03-14</strong> by <strong>Geoffrey McGill</strong></p>-->
+</div>
+
+<nav class="flex mt-14">
+    <div class="w-1/2">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/developer-guide/getting-started/">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+            <span>
+                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                <span class="block mt-1">Getting Started</span>
+            </span>
+        </a>
+    </div>
+
+    <div class="w-1/2">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/developer-guide/developer-utilities/">
+            <span>
+                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                <span class="block mt-1">Developer Utilities</span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+        </a>
+    </div>
+</nav>
+
+
+        </main>
+
+        <div class="border-t dark:border-dark-650 pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between">
+    <div>
+        <ul class="flex flex-wrap items-center text-sm">
+</ul>
+
+    </div>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright SupremeGamers 2021. All rights reserved.</p>
+</div>
+</footer>
+
+        </div>
+    </div>
+    
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 transform translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:flex-shrink-0 lg:pt-6 lg:transform-none lg:w-56 lg:z-0 md:w-72 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+        </div>
+    </div>
+    
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+        <div id="docs-overlay-target"></div>
+
+        <script>window.__DOCS__ = { "title": "Environment Variables", icon: "file", hasPrism: false, hasMermaid: false }</script>
+    </body>
+</html>
