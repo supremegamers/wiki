@@ -7,7 +7,7 @@ order: -300
 Gallium HUD
 ------------
 
-" it’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.
+Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.
 
 The hud is part of Mesa, so if you’re using the open-source drivers you’re ready to use it without any external package."
 
