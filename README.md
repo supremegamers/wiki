@@ -21,3 +21,9 @@ order: 0
 Check the left sidebar to find what you need!
 **You should read all the docs carefully** unless you wanna run into trouble, we won't care to help you at all if you don't. So mind it!
 !!!
+
+# Contributing
+
+Want to suggest/propose imporvements to this Wiki? Simply click on 📝 `Edit this page` button over any page on our [Wiki](https://wiki.supreme-gamers.com).
+
+Create a pull request once you have made your edits via Github.
