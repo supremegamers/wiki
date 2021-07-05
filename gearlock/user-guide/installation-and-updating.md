@@ -58,9 +58,11 @@ You can also follow the same instructions of **Installing GearLock** as describe
 
 I seriously don't prefer to follow video guides, only mentioning them here just if they are any useful to you...
 
-!! These video tutorials can be outdated, proceed at your own risk!
+!!!warning Warning
+These video tutorials can be outdated, proceed at your own risk!
+!!!
 
-[plugin:youtube](https://www.youtube.com/watch?v=tg_lLrGaoYE)
+- https://www.youtube.com/watch?v=tg_lLrGaoYE
 
 # Troubleshooting
 
