@@ -21,7 +21,7 @@ jobs:
       - uses: retypeapp/action-build@v1
       - name: Change /blob/ with /edit/
         run: |
-          _retype_tmpdir="$(readlink -f "$(basename "$(find /tmp/tmp.* -type f \( -name "404.html" -o -name "index.html" \) | head -n1)")")";
+          find /tmp/tmp* -type f \( -name "404.html" -o -name "index.html" \)
           cd "$_retype_tmpdir";
           echo "$_retype_tmpdir";
           while read -r _file; do {
