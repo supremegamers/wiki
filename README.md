@@ -15,7 +15,6 @@ order: 0
 - [ ] Troubleshooting common android-x86 bugs
 - [ ] Special development tips and guides for developers
 - [x] User and developer guides for GearLock recovery
-- [ ] And many other cool things!
 
 !!!warning
 Check the left sidebar to find what you need!
