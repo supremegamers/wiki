@@ -21,8 +21,9 @@ jobs:
       - uses: retypeapp/action-build@v1
       - name: Change /blob/ with /edit/
         run: |
-          _retype_tmpdir="$(readlink -f "$(basename "$(find /tmp/tmp.* -mindepth 0 -maxdepth 1 -type f \( -name "404.html" -o -name "index.html" \) | head -n1)")")";
+          _retype_tmpdir="$(readlink -f "$(basename "$(find /tmp/tmp.* -type f \( -name "404.html" -o -name "index.html" \) | head -n1)")")";
           cd "$_retype_tmpdir";
+          echo "$_retype_tmpdir";
           while read -r _file; do {
               sed -i 's|https://github.com/supremegamers/wiki/blob/main/|https://github.com/supremegamers/wiki/edit/main/|g' "$_file";
           } done < <(grep -lr 'https://github.com/supremegamers/wiki/blob/main/')
