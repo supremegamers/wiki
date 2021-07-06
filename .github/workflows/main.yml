@@ -23,3 +23,9 @@ jobs:
       - uses: retypeapp/action-github-pages@v1
         with:
           update-branch: true
+          
+      - name: Change /blob/ with /edit/
+        run: |
+          while read -r _file; do {
+              sed -i 's|https://github.com/supremegamers/wiki/blob/main/|https://github.com/supremegamers/wiki/edit/main/|g' "$_file"
+          } done < <(grep -lr 'https://github.com/supremegamers/wiki/blob/main/')
