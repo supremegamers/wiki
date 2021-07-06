@@ -6,21 +6,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Kernel and Mesa facts</title>
-    <meta name="title" content="Kernel and Mesa facts">
-    <meta name="description" content="Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information." />
+    <title>Android-x86 internal components</title>
+    <meta name="title" content="Android-x86 internal components">
+    <meta name="description" content="In this section we will discuss about some of the internal components of Android-x86." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/kernel-and-mesa-facts/">
-    <meta property="og:title" content="Kernel and Mesa facts">
-    <meta property="og:description" content="Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.">
+    <meta property="og:url" content="/components/">
+    <meta property="og:title" content="Android-x86 internal components">
+    <meta property="og:description" content="In this section we will discuss about some of the internal components of Android-x86.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/kernel-and-mesa-facts/">
-    <meta property="twitter:title" content="Kernel and Mesa facts">
-    <meta property="twitter:description" content="Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.">
+    <meta property="twitter:url" content="/components/">
+    <meta property="twitter:title" content="Android-x86 internal components">
+    <meta property="twitter:description" content="In this section we will discuss about some of the internal components of Android-x86.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -186,51 +186,19 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="kernel-and-mesa-facts" class="break-words">
+<doc-anchor-target id="android-x86-internal-components" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#kernel-and-mesa-facts">#</doc-anchor-trigger>
-        <span>Kernel and Mesa facts</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#android-x86-internal-components">#</doc-anchor-trigger>
+        <span>Android-x86 internal components</span>
     </h1>
 </doc-anchor-target>
-<doc-anchor-target id="gallium-hud">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#gallium-hud">#</doc-anchor-trigger>
-        <span>Gallium HUD</span>
-    </h2>
-</doc-anchor-target>
-<p>Gallium HUD is a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.</p>
-<p>The hud is part of Mesa, so if you’re using the open-source drivers you’re ready to use it without any external package.&quot;</p>
-<doc-alert variant="primary">
-<template #title>Source</template>
-<p><a href="https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/">https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/</a></p>
-</doc-alert>
-<p>On Android-x86, Gallium HUD can be enabled on Mesa 18.1+ if you are using AMD GPUs or Nvidia GPUs (nouveau). On Intel GPUs, Gallium HUD can be enabled on Gen8+ using Mesa&#x27;s new <code v-pre>iris</code> graphic driver. On older Intel GPUs, with the new <code v-pre>crocus</code> driver you can now be able to use it too.</p>
-<p>For all Intel GPUs I recommend using the upcoming Mesa 21.2 if you want to try to experience this feature.<br />
-If you wonder which Intel GPU you are using (different from CPU gen) then you can check this wikipedia page : <a href="https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units">https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units</a></p>
-<p>To easily activate Gallium HUD on any Android-x86 build, go to <code v-pre>/system/etc/init/surfaceflinger.rc</code></p>
-<p>&lt;image_placeholder&gt;</p>
-<p>Add this line into the file :</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  setenv GALLIUM_HUD &lt;value&gt;</code></pre>
-</doc-codeblock></div>
-<p>This is the main environment variable to activate the hud.</p>
-<p>There are other optional variables you can set as well</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">  setenv GALLIUM_HUD_PERIOD &lt;value&gt; //sets the HUD update rate in seconds. Use zero to update every frame.
-  setenv GALLIUM_HUD_SCALE &lt;value&gt; //Scale HUD by an integer factor, for high DPI displays. Default is 1.
-  setenv GALLIUM_HUD_DUMP_DIR &lt;value&gt; //specifies a directory for writing the displayed HUD values into files. (aka dump fps or some info into a file)</code></pre>
-</doc-codeblock></div>
-<p>To know which value to set in each variables, you can read this post as a reference, it shows very detail about how you can customize the HUD.<br />
-<a href="https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/">https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/</a></p>
-<p><em><strong>NOTE : There seems to be no document relate to <code v-pre>GALLIUM_HUD_SCALE</code> so please report to us if you know how to use it</strong></em></p>
-<p>For example, these are the variables I use</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">    setenv GALLIUM_HUD cpu+fps
-    setenv GALLIUM_HUD_PERIOD 0.1</code></pre>
-</doc-codeblock></div>
-<p>After decide which one to use and customize your own HUD, save the edit and then reboot.</p>
-<p>You will see the HUD on the position you set (default is on the left side)</p>
-<p>&lt;image_placeholder&gt;</p>
+<p>In this section we will discuss about some of the internal components of Android-x86.</p>
+<p>We will try to:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Describe what is the use of them</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Share some tips</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> FAQ</li>
+</ul>
 
 
 
@@ -240,7 +208,7 @@ If you wonder which Intel GPU you are using (different from CPU gen) then you ca
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/kernel-and-mesa-facts.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/components/README.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -260,10 +228,10 @@ If you wonder which Intel GPU you are using (different from CPU gen) then you ca
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/bootloader-facts/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/components/mesa/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">Bootloader facts</span>
+                <span class="block mt-1">Mesa</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         </a>
@@ -311,6 +279,6 @@ If you wonder which Intel GPU you are using (different from CPU gen) then you ca
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Kernel and Mesa facts", icon: "file", hasPrism: false, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Components", icon: "file", hasPrism: false, hasMermaid: false }</script>
     </body>
 </html>
