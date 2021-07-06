@@ -1,5 +1,6 @@
 ---
 label: 'Wifi and Ethernet'
+icon: git-compare
 order: -300
 ---
 

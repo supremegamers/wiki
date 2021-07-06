@@ -1,5 +1,6 @@
 ---
 label: Sound
+icon: megaphone
 order: -200
 ---
 

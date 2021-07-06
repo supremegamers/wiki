@@ -1,5 +1,6 @@
 ---
 label: Booting
+icon: issue-reopened
 order: -100
 ---
 
