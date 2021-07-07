@@ -2,7 +2,7 @@
 label: GearLock
 icon: gear
 expanded: true
-order: -400
+order: -500
 ---
 
 # GearLock

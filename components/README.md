@@ -1,6 +1,6 @@
 ---
 label: Components
-icon: question
+icon: tools
 order: -300
 expanded: true
 ---
