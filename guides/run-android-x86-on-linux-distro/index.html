@@ -6,21 +6,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>GearLock</title>
-    <meta name="title" content="GearLock">
-    <meta name="description" content="Let's get started ..." />
+    <title>Run Android-x86 on Linux Distro</title>
+    <meta name="title" content="Run Android-x86 on Linux Distro">
+    <meta name="description" content="There are various ways to emulate android-x86 within linux distributions." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wiki.supreme-gamers.com/gearlock/">
-    <meta property="og:title" content="GearLock">
-    <meta property="og:description" content="Let's get started ...">
+    <meta property="og:url" content="https://wiki.supreme-gamers.com/guides/run-android-x86-on-linux-distro/">
+    <meta property="og:title" content="Run Android-x86 on Linux Distro">
+    <meta property="og:description" content="There are various ways to emulate android-x86 within linux distributions.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wiki.supreme-gamers.com/gearlock/">
-    <meta property="twitter:title" content="GearLock">
-    <meta property="twitter:description" content="Let's get started ...">
+    <meta property="twitter:url" content="https://wiki.supreme-gamers.com/guides/run-android-x86-on-linux-distro/">
+    <meta property="twitter:title" content="Run Android-x86 on Linux Distro">
+    <meta property="twitter:description" content="There are various ways to emulate android-x86 within linux distributions.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -186,13 +186,115 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="gearlock" class="break-words">
+<doc-anchor-target id="run-android-x86-on-linux-distro" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#gearlock">#</doc-anchor-trigger>
-        <span>GearLock</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#run-android-x86-on-linux-distro">#</doc-anchor-trigger>
+        <span>Run Android-x86 on Linux Distro</span>
     </h1>
 </doc-anchor-target>
-<p>Let&#x27;s get started ...</p>
+<p>There are various ways to emulate android-x86 within linux distributions.</p>
+<p>Here we will try to mention a few and explain their procedure where possible.</p>
+<doc-anchor-target id="anbox">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#anbox">#</doc-anchor-trigger>
+        <span>Anbox</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Anbox Website</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://anbox.io/</span>
+    </div>
+    <a href="https://anbox.io/" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="dockdroid">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dockdroid">#</doc-anchor-trigger>
+        <span>DockDroid</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">See on Github</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://github.com/sickcodes/dock-droid/</span>
+    </div>
+    <a href="https://github.com/sickcodes/dock-droid/" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="with-kvm">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#with-kvm">#</doc-anchor-trigger>
+        <span>With KVM</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">KVM homepage</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://virt-manager.org/</span>
+    </div>
+    <a href="https://virt-manager.org/" class="absolute block inset-0"></a>
+</div>
+</p>
+<doc-anchor-target id="instructions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#instructions">#</doc-anchor-trigger>
+        <span>Instructions</span>
+    </h3>
+</doc-anchor-target>
+<p>wip...</p>
+<doc-anchor-target id="qemu-virgl">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#qemu-virgl">#</doc-anchor-trigger>
+        <span>Qemu Virgl</span>
+    </h2>
+</doc-anchor-target>
+<p>wip....</p>
+<doc-anchor-target id="with-virtualbox">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#with-virtualbox">#</doc-anchor-trigger>
+        <span>With Virtualbox</span>
+    </h2>
+</doc-anchor-target>
+<p>wip...</p>
+<doc-anchor-target id="xdroid">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#xdroid">#</doc-anchor-trigger>
+        <span>Xdroid</span>
+    </h2>
+</doc-anchor-target>
+<p>
+<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
+    <div class="flex items-center text-blue-500 dark:text-blue-400">
+        <span class="inline-block mb-px">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
+        </span>
+        <span class="inline-block font-medium ml-2">Xdroid Download Page</span>
+    </div>
+    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
+        <span>https://www.linzhuotech.com/Product/download/</span>
+    </div>
+    <a href="https://www.linzhuotech.com/Product/download/" class="absolute block inset-0"></a>
+</div>
+</p>
 
 
 
@@ -202,7 +304,7 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/gearlock/README.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/guides/run-android-x86-on-linux-distro.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -212,20 +314,20 @@
 
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/guides/run-android-x86-on-linux-distro/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/guides/allow-apps-run-in-background/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">Run Android-x86 on Linux Distro</span>
+                <span class="block mt-1">Allow Apps Run in the Background</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/user-guide/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">User Guide</span>
+                <span class="block mt-1">GearLock</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         </a>
@@ -273,6 +375,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "GearLock", icon: "file", hasPrism: false, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Run Android-x86 on Linux Distro", icon: "file", hasPrism: false, hasMermaid: false }</script>
     </body>
 </html>
