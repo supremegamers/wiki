@@ -15,7 +15,9 @@ Here we will try to mention a few and explain their procedure where possible.
 
 [!ref See on Github](https://github.com/sickcodes/dock-droid/)
 
-## With KVM
+## KVM
+
+You can use `virt-manager` GUI application to deal with creating KVM instances on the fly.
 
 [!ref KVM homepage](https://virt-manager.org/)
 
@@ -27,7 +29,7 @@ wip...
 
 [!ref See forum post](https://supreme-gamers.com/t/best-android-emulator-for-linux-with-virgl.783/#post-5552)
 
-## With Virtualbox
+## Virtualbox
 
 wip...
 
