@@ -25,7 +25,7 @@ wip...
 
 ## Qemu Virgl
 
-wip....
+[!ref See forum post](https://supreme-gamers.com/t/best-android-emulator-for-linux-with-virgl.783/#post-5552)
 
 ## With Virtualbox
 
