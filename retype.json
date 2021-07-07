@@ -8,6 +8,8 @@
 
   "favicon": "static/favicon.png",
 
+  "cname": "wiki.supreme-gamers.com",
+
   "edit": {
     "repo": "https://github.com/supremegamers/wiki",
     "branch": "main"
