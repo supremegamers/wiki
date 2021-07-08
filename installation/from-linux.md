@@ -1,5 +1,5 @@
 ---
-label: From linux
+label: Linux
 icon: ":penguin:"
 order: 100
 ---
