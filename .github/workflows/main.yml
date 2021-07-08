@@ -24,7 +24,24 @@ jobs:
         #run: |
           #git push -d origin retype
           
+      - name: Symlink stuff for redirecton
+        run: |
+          _links=(
+              "gearlock/user-guide/getting-geardump.md|common-issues/gathering-logs.md"
+          )
+          
+          for _link in "${_links[@]}"; do {
+              _caller="${_link%%|*}";
+              _target="${_link##*|}";
+              
+              ln -srf "$_target" "$_caller";
+              
+              unset _caller _target;
+          } done
+          
+      
       - uses: retypeapp/action-build@v1
+      
       - name: Change /blob/ with /edit/
         run: |
           # Change /blob/ route to /edit/
@@ -34,6 +51,7 @@ jobs:
               sed -i 's|https://github.com/supremegamers/wiki/blob/main/|https://github.com/supremegamers/wiki/edit/main/|g' "$_file";
           } done < <(grep -lr 'https://github.com/supremegamers/wiki/blob/main/')
           
+
       - uses: retypeapp/action-github-pages@v1
         with:
           update-branch: true
