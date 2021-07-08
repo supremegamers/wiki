@@ -17,7 +17,13 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
-
+          
+      - name: Clean existing retype branch
+        run: |
+          git branch -d retype
+          git gc --prune=now --aggressive
+          git push -d origin retype
+          
       - uses: retypeapp/action-build@v1
       - name: Change /blob/ with /edit/
         run: |
@@ -27,11 +33,6 @@ jobs:
           while read -r _file; do {
               sed -i 's|https://github.com/supremegamers/wiki/blob/main/|https://github.com/supremegamers/wiki/edit/main/|g' "$_file";
           } done < <(grep -lr 'https://github.com/supremegamers/wiki/blob/main/')
-          
-          # Clean out old repository
-          git branch -d retype
-          git gc --prune=now --aggressive
-          git push -d origin retype
           
       - uses: retypeapp/action-github-pages@v1
         with:
