@@ -20,11 +20,9 @@ jobs:
         with:
           dotnet-version: 5.0.x
           
-      - name: Clean existing retype branch
-        run: |
-          git branch -d retype
-          git gc --prune=now --aggressive
-          git push -d origin retype
+      #- name: Clean existing retype branch
+        #run: |
+          #git push -d origin retype
           
       - uses: retypeapp/action-build@v1
       - name: Change /blob/ with /edit/
