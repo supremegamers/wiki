@@ -30,6 +30,8 @@ jobs:
               "gearlock/user-guide/getting-geardump.md|common-issues/gathering-logs.md"
           )
           
+          exit 0; # Temporarily disable this
+
           for _link in "${_links[@]}"; do {
               _caller="${_link%%|*}";
               _target="${_link##*|}";
