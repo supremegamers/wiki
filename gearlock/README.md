@@ -1,7 +1,6 @@
 ---
 label: GearLock
 icon: gear
-expanded: true
 order: -500
 ---
 
