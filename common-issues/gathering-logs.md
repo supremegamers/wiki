@@ -1,9 +1,10 @@
 ---
-title: 'Getting geardump'
-taxonomy:
-    category:
-        - docs
+label: Gathering Logs
+icon: database
+order: -400
 ---
+
+## GearDump
 
 GearDump is basically a simple log collection tool to help boost the debugging process on user-reported issues. It was originally made for GearLock but now it can be helpful for the whole operating-system log collection as well.
 
