@@ -26,4 +26,4 @@ submenu   'DarkMatter-Exo4.7'  --class submenu --class icon-asg {
 
 - Download the file below and copy in `C:/grub2/windata/customconfigs`
 
-[!file](DarkMatter-Exo4.7.cfg)
+[!file](../DarkMatter-Exo4.7.cfg)
