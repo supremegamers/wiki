@@ -89,7 +89,7 @@ tar -cf logs.tar *
 
 ===
 
-> Now lets find the archived `logs.tar` file for uploading to a dev
+=== Finding the archived `logs.tar` file for uploading to a dev
 
 +++ From Booted Android System
 
@@ -125,3 +125,5 @@ E.g **Paragon LinuxFS**, **Ext2fsd**
 !!!
 
 +++
+
+===
