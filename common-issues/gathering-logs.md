@@ -69,9 +69,8 @@ lsusb > lsusb.log
 ### logcat
 
 !!!warning Warning
-Logcat does not run in recovery-mode
-
-You can only run it after the `android` bootanimation. (Aka android-interface)
+Logcat does not work in recovery-mode
+**Normally** you can only run it after the `android` bootanimation. (Aka android-interface)
 !!!
 
 ```bash
@@ -112,6 +111,8 @@ Then you can find it on your `Internal Storage` from a file-manager.
 mkdir dmount
 sudo mount -oloop,ro data.img dmount
 ```
+
+
 
 +++ From Windows
 
