@@ -112,8 +112,6 @@ mkdir dmount
 sudo mount -oloop,ro data.img dmount
 ```
 
-
-
 +++ From Windows
 
 - Open the folder where you have Android-x86 installed.
