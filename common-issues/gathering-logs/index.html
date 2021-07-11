@@ -222,8 +222,8 @@
 <p>If that is not working then install <a href="https://play.google.com/store/apps/details?id=com.termoneplus">TermOneplus</a> app and open it.</p>
 <p>Then run <code v-pre>su</code> in <strong>TermOneplus</strong> app.</p>
 </doc-tab>
-<doc-tab id="on-recovery-mode">
-<template #title>On Recovery Mode</template>
+<doc-tab id="on-recovery-mode-when-you-can-t-boot-into-android-interface">
+<template #title>On Recovery Mode (When you can&#x27;t boot into android-interface)</template>
 <ul>
 <li>Boot into recovery mode from grub</li>
 <li>Select option <code v-pre>3. Open Virtual Command Terminal</code></li>
@@ -283,11 +283,50 @@ cd /data/mylogs</code></pre>
 </doc-codeblock></div>
 <doc-panel id="making-an-archive-of-the-logs">
     <template #title>Making an archive of the logs</template>
-<p>Assuming that you are in <code v-pre>/data/mylogs</code> directory as instructed above.</p>
+<p>Assuming that you are in <code v-pre>/data/mylogs</code> directory <doc-anchor-trigger to="#create-a-working-directtory">as instructed above</doc-anchor-trigger>.</p>
 <p>Run the following command while being in <code v-pre>/data/mylogs</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">tar -cf logs.tar *</code></pre>
 </doc-codeblock></div>
+</doc-panel>
+<doc-panel id="finding-the-archived-logs-tar-file-for-uploading-to-a-dev">
+    <template #title>Finding the archived <code v-pre>logs.tar</code> file for uploading to a dev</template>
+<doc-tabs>
+<doc-tab id="from-booted-android-system">
+<template #title>From Booted Android System</template>
+<p>Run the following command in your terminal:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">cp /data/mylogs/logs.tar /sdcard</code></pre>
+</doc-codeblock></div>
+<p>Then you can find it on your <code v-pre>Internal Storage</code> from a file-manager.</p>
+</doc-tab>
+<doc-tab id="from-linux">
+<template #title>From Linux</template>
+<ul>
+<li>Mount your Android-x86 partition</li>
+<li>If you have a directory called <code v-pre>data</code> inside it then you should find <code v-pre>logs.tar</code> at <code v-pre>data/mylogs</code></li>
+<li>Or if you have <code v-pre>data.img</code> then mount it with the following command and look at <code v-pre>dmount/mylogs</code> for <code v-pre>logs.tar</code>:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">mkdir dmount
+sudo mount -oloop,ro data.img dmount</code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab id="from-windows">
+<template #title>From Windows</template>
+<ul>
+<li>Open the folder where you have Android-x86 installed.</li>
+<li>If you have <code v-pre>data.img</code> then use <a href="https://www.7-zip.org/download.html">7-zip</a> to open it.</li>
+<li>If you have <code v-pre>data</code> folder then open it normally.</li>
+<li>Look for a folder called <code v-pre>mylogs</code> and you should find <code v-pre>logs.tar</code> there.</li>
+</ul>
+<doc-alert variant="info">
+<template #title>Ext4 on Windows</template>
+<p>If you had installed Android-x86 inside an <strong>Ext4</strong> partition from Windows then use the appropriate program to mount it.<br />
+E.g <strong>Paragon LinuxFS</strong>, <strong>Ext2fsd</strong></p>
+</doc-alert>
+</doc-tab>
+</doc-tabs>
 </doc-panel>
 
 
