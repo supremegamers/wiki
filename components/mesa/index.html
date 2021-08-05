@@ -27,9 +27,9 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.681475369062" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475369062" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
 </head>
     <body>
@@ -233,10 +233,25 @@ If you wonder which Intel GPU you are using (different from CPU gen) then you ca
 <pre class="language-none"><code v-pre class="language-none">    setenv GALLIUM_HUD cpu+fps
     setenv GALLIUM_HUD_PERIOD 0.1</code></pre>
 </doc-codeblock></div>
+<p><figure class="content-center">
+    <img src="https://i.ibb.co/Vq87SFb/image.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>After decide which one to use and customize your own HUD, save the edit and then reboot.</p>
 <p>You will see the HUD on the position you set (default is on the left side)</p>
 <p><figure class="content-center">
     <img src="https://i.ibb.co/KVHxnnS/image.png" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Or, if you just want a small fps meter, you can use <code v-pre>simple</code> option</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">    setenv GALLIUM_HUD simple
+    setenv GALLIUM_HUD_PERIOD 0.1</code></pre>
+</doc-codeblock></div>
+<p><figure class="content-center">
+    <img src="https://www.phoronix.net/image.php?id=2018&amp;image=gallium_hud_simple2_show" alt="" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
