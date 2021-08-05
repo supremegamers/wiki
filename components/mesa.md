@@ -20,7 +20,7 @@ If you wonder which Intel GPU you are using (different from CPU gen) then you ca
 
 To easily activate Gallium HUD on any Android-x86 build, go to `/system/etc/init/surfaceflinger.rc`
 
-<image_placeholder> 
+![](https://i.ibb.co/MD8yng9/image.png)
 
 Add this line into the file : 
 ```
@@ -50,5 +50,5 @@ After decide which one to use and customize your own HUD, save the edit and then
 
 You will see the HUD on the position you set (default is on the left side)
 
-<image_placeholder>
+![](https://i.ibb.co/KVHxnnS/image.png)
 
