@@ -38,6 +38,8 @@ There are other optional variables you can set as well
 To know which value to set in each variables, you can read this post as a reference, it shows very detail about how you can customize the HUD.
 https://manerosss.wordpress.com/2017/07/13/howto-gallium-hud/
 
+
+
 ***NOTE : There seems to be no document relate to `GALLIUM_HUD_SCALE` so please report to us if you know how to use it***
 
 For example, these are the variables I use
@@ -45,10 +47,21 @@ For example, these are the variables I use
     setenv GALLIUM_HUD cpu+fps
     setenv GALLIUM_HUD_PERIOD 0.1
 ```
+![](https://i.ibb.co/Vq87SFb/image.png)
+
 
 After decide which one to use and customize your own HUD, save the edit and then reboot.
 
 You will see the HUD on the position you set (default is on the left side)
 
 ![](https://i.ibb.co/KVHxnnS/image.png)
+
+Or, if you just want a small fps meter, you can use `simple` option
+```
+    setenv GALLIUM_HUD simple
+    setenv GALLIUM_HUD_PERIOD 0.1
+```
+
+![](https://www.phoronix.net/image.php?id=2018&image=gallium_hud_simple2_show)
+
 
