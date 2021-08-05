@@ -7,6 +7,8 @@ order: -100
 Gallium HUD
 ------------
 
+![](https://manerosss.files.wordpress.com/2017/07/gallium_hudfinal1.gif?w=646)
+
 "It’s a highly customizable Heads-Up Display (HUD) capable of displaying some extremely helpful information.
 
 The hud is part of Mesa, so if you’re using the open-source drivers you’re ready to use it without any external package."
