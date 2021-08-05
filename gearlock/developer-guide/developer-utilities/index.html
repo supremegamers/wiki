@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css" rel="stylesheet" />
+    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js" defer></script>
-    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.681475053829" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -359,7 +359,7 @@
 </doc-anchor-target>
 <hr />
 <p>If linux is your daily driver then you should be obviously fimiliar with the things that I&#x27;m about to show you.</p>
-<p>Geco always prints with a partly hidden <code v-pre>\n</code> newline character.<br />
+<p>Geco always prints with a partly hidden <code v-pre>\n</code> newline character.
 It might be a bit hard to notice it but it actually works like that.</p>
 <p>For example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -481,7 +481,7 @@ rm: cannot remove '/baloo': No such file or directory</code></pre>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none"></code></pre>
 </doc-codeblock></div>
-<p>As you can see, no output came out but the command was surely done.<br />
+<p>As you can see, no output came out but the command was surely done.
 Although you should always test out each of the command that you silence to be sure that it actually ran instead of doing nothing.</p>
 <doc-anchor-target id="gclone">
     <h2>
@@ -491,12 +491,12 @@ Although you should always test out each of the command that you silence to be s
 </doc-anchor-target>
 <p>For doing the copy-paste job easily over file &amp; folders you get to use gclone and you must use it! gclone is initially rsync and it&#x27;s just here to make it a bit more quicker to do the thing while showing a human friendly progress bar.</p>
 <ul>
-<li>With progress indicator<br />
+<li>With progress indicator
 <code v-pre>gclone /source /terget</code></li>
 </ul>
 <p>Example: <code v-pre>gclone /system/priv-app/GmsCore /sdcard/Downloads</code></p>
 <ul>
-<li>Without progress indicator<br />
+<li>Without progress indicator
 <code v-pre>gclone -q /source /terget</code></li>
 </ul>
 <p>Example: <code v-pre>gclone -q /system/build.prop /data/adb</code></p>
@@ -540,8 +540,8 @@ Although you should always test out each of the command that you silence to be s
         <span>gearprop</span>
     </h2>
 </doc-anchor-target>
-<p><code v-pre>gearprop</code> can help when you need to modify multiple system props.<br><br />
-It also got the capability to force overwrite any kind of property. (Bypassing <code v-pre>setprop</code> limitations)<br />
+<p><code v-pre>gearprop</code> can help when you need to modify multiple system props.<br>
+It also got the capability to force overwrite any kind of property. (Bypassing <code v-pre>setprop</code> limitations)
 There are two ways you can acheive this, which are:</p>
 <ul>
 <li>Through a variable</li>
@@ -554,7 +554,7 @@ There are two ways you can acheive this, which are:</p>
     </h4>
 </doc-anchor-target>
 <hr />
-<p>Define your props inside a var in <code v-pre>&lt;prop&gt; &lt;value&gt;</code> format.<br><br />
+<p>Define your props inside a var in <code v-pre>&lt;prop&gt; &lt;value&gt;</code> format.<br>
 Which obviously is supposed to be called from a script.</p>
 <p><strong>An example:</strong> (from <code v-pre>gearprop --help</code>)</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -576,14 +576,14 @@ gearprop &quot;$my_var&quot;</code></pre>
     </h4>
 </doc-anchor-target>
 <hr />
-<p>This is also pretty simple and straightforward.<br><br />
+<p>This is also pretty simple and straightforward.<br>
 Just like the variable method, define your props in <code v-pre>&lt;prop&gt; &lt;value&gt;</code> format in your text file.<br></p>
 <p>Let&#x27;s assume you have a text file named <code v-pre>myprops.txt</code></p>
 <p><strong>Then you can do:</strong></p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">gearprop myprops.txt</code></pre>
 </doc-codeblock></div>
-<p>Extra notes: You can define your props in <code v-pre>&lt;prop&gt;=&lt;value&gt;</code> format also but thats deprecieated.<br />
+<p>Extra notes: You can define your props in <code v-pre>&lt;prop&gt;=&lt;value&gt;</code> format also but thats deprecieated.
 Also, you can specify multiple variable or files together. GearProp initially passess all the processed data to <code v-pre>gearprop-helper</code> and it does the rest.</p>
 <p><strong>gearprop alternative:</strong> <code v-pre>setprop</code></p>
 <doc-anchor-target id="gearhost">

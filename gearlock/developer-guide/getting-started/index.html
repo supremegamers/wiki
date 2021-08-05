@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css" rel="stylesheet" />
+    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js" defer></script>
-    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.681475053829" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -287,7 +287,7 @@
         <span>Pre-build kernel package</span>
     </h2>
 </doc-anchor-target>
-<p>The pre-build kernel package has everything ready for you.<br><br />
+<p>The pre-build kernel package has everything ready for you.<br>
 You have to just place your corresponding kernel files.</p>
 <p>Structure of pre-build kernel package:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -385,8 +385,8 @@ DEF_HEADER=&quot;yes&quot; #(Default -yes) Whether to use the default header whi
         <span>GearBoot Executables</span>
     </h2>
 </doc-anchor-target>
-<p>GearBoot executables are executed during boot.<br><br />
-Note: You don&#x27;t have to manually copy or remove gearboot executables, GearLock will take care of that.<br />
+<p>GearBoot executables are executed during boot.<br>
+Note: You don&#x27;t have to manually copy or remove gearboot executables, GearLock will take care of that.
 Check <a href="https://supreme-gamers.com/gearlock/#page-toc-2">custom-core</a> package structure and <a href="https://supreme-gamers.com/gearlock/gearboot">GearBoot</a> page.</p>
 <doc-anchor-target id="uninstallation-modes">
     <h2>

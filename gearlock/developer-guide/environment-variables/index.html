@@ -25,10 +25,10 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css" rel="stylesheet" />
+    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js" defer></script>
-    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -198,7 +198,7 @@
         <span>Introduction</span>
     </h2>
 </doc-anchor-target>
-<p>The GearLock environment variables can be used to access some common data.<br />
+<p>The GearLock environment variables can be used to access some common data.
 You must keep in mind that these are only useable during GearLock or GearBoot runtime.</p>
 <doc-anchor-target id="variables">
     <h2>
@@ -412,8 +412,8 @@ You must keep in mind that these are only useable during GearLock or GearBoot ru
     </h2>
 </doc-anchor-target>
 <p><code v-pre>ghome</code> is the place where GearLock stores extensions, gearboot scripts, common dependencie directory, status log files. It also contains the <code v-pre>.gearlockrc</code></p>
-<p>If gearlock came pre-installed into your system then <code v-pre>$GHOME</code> path should be <code v-pre>/system/ghome</code><br><br />
-While if it was a manual installation then <code v-pre>$GHOME</code> path should be <code v-pre>/data/ghome</code><br />
+<p>If gearlock came pre-installed into your system then <code v-pre>$GHOME</code> path should be <code v-pre>/system/ghome</code><br>
+While if it was a manual installation then <code v-pre>$GHOME</code> path should be <code v-pre>/data/ghome</code>
 Note: It doesn&#x27;t matter even if you move swap it between <code v-pre>/system</code> &amp; <code v-pre>/data</code>.</p>
 <p>Other vars depended on <code v-pre>$GHOME</code> &gt;</p>
 <ul>

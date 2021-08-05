@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wiki.supreme-gamers.com/sitemap.xml.gz

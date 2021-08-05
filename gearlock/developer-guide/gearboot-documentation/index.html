@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css" rel="stylesheet" />
+    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js" defer></script>
-    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.681475053829" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -199,7 +199,7 @@
         <span>Introduction</span>
     </h2>
 </doc-anchor-target>
-<p>GearBoot is a very simple program which can run executables during boot dynamically.<br><br />
+<p>GearBoot is a very simple program which can run executables during boot dynamically.<br>
 GearBoot supports four different boot stages.</p>
 <ul>
 <li>init</li>
@@ -214,7 +214,7 @@ GearBoot supports four different boot stages.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">/gearlock/bin:/sbin:/bin:/system/bin:/system/xbin:/system/vendor/bin</code></pre>
 </doc-codeblock></div>
-<p>If <strong>GearLock</strong> came pre-installed in your system then gearboot dir can be found at <code v-pre>/system/ghome</code><br><br />
+<p>If <strong>GearLock</strong> came pre-installed in your system then gearboot dir can be found at <code v-pre>/system/ghome</code><br>
 If it was a manual installation then it should be at <code v-pre>/data/ghome</code></p>
 <p>For most developers <code v-pre>boot-comp</code> stage should be fine and shouldn&#x27;t mess with other stages unless you know what you&#x27;re doing!</p>
 <p><strong>Use the <a href="../getting-started/#custom-core-package">custom-core</a> package to work with gearboot scripts</strong></p>
@@ -248,7 +248,7 @@ If it was a manual installation then it should be at <code v-pre>/data/ghome</co
         <span>post-fs-data</span>
     </h2>
 </doc-anchor-target>
-<p>This is obviously after <code v-pre>post-fs</code> stage. During this stage, <code v-pre>build.prop</code> and most of the system modules are already loaded.<br />
+<p>This is obviously after <code v-pre>post-fs</code> stage. During this stage, <code v-pre>build.prop</code> and most of the system modules are already loaded.
 The bootanimation comes after this stage.</p>
 <doc-anchor-target id="boot-post">
     <h2>
@@ -263,8 +263,8 @@ The bootanimation comes after this stage.</p>
         <span>boot-comp</span>
     </h2>
 </doc-anchor-target>
-<p>This is after bootanimation then you see something like <code v-pre>Android is loading...</code> in graphical interface.<br><br />
-To be noted that this is basically the final stage and no more stages are to come after this.<br><br />
+<p>This is after bootanimation then you see something like <code v-pre>Android is loading...</code> in graphical interface.<br>
+To be noted that this is basically the final stage and no more stages are to come after this.<br>
 For most cases it&#x27;s suggested to target this stage for your executable.</p>
 <doc-anchor-target id="write-gearboot-logfile">
     <h2>

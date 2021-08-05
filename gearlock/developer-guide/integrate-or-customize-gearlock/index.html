@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css" rel="stylesheet" />
+    <link href="/resources/css/retype.css?v=1.8.681475053829" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js" defer></script>
-    <script type="text/javascript" src="/resources/js/retype.js" defer></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681475053829" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.681475053829" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -292,7 +292,7 @@ DEFAULT_THEME=&quot;notset&quot;
     </h2>
 </doc-anchor-target>
 <p>If you&#x27;re a developer and willing to integrage GearLock in your android-x86 build then <code v-pre>hook</code> can be useful to you. GearLockUi default menu structure and most of the sub-elements of GearLock is <strong>dynamic</strong> and can be modified/extended easily. If you look at <code v-pre>/gearlock/core</code> and try to understand then it could be more clear to you.</p>
-<p>The concept of <code v-pre>hook</code> is pretty simple. It is mainly there to merge everything from <a href="../environment-variables/#ghome">$GHOME</a>/<strong>hook</strong>/* into <code v-pre>/gearlock/</code>.<br />
+<p>The concept of <code v-pre>hook</code> is pretty simple. It is mainly there to merge everything from <a href="../environment-variables/#ghome">$GHOME</a>/<strong>hook</strong>/* into <code v-pre>/gearlock/</code>.
 So that you can modify core files of gearlock without having to touch the actual core.</p>
 <p>You can also make the use of <code v-pre>HOOK_DEL_FILES</code> in <code v-pre>gearlockrc</code> to delete any file within <code v-pre>/gearlock/*</code> before GearLockUi runtime and loading hook.</p>
 <doc-anchor-target id="here-is-a-messy-tutorial-about-changing-or-adding-a-new-item-in-gearlock-main-menu">
@@ -313,7 +313,7 @@ So that you can modify core files of gearlock without having to touch the actual
 </li>
 </ul>
 <blockquote>
-<p>For example, they could be:<br />
+<p>For example, they could be:
 <code v-pre>/gearlock/core/main.src/_lang_/_menu_en</code> (Menu file with your new menu item record at end of line) &amp;&amp; <code v-pre>/gearlock/core/main.src/X</code> (Your item executable)</p>
 </blockquote>
 <ul>
