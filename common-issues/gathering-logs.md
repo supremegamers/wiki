@@ -69,7 +69,7 @@ lsusb > lsusb.log
 ### logcat
 
 !!!warning Warning
-Logcat does not work in recovery-mode
+Logcat does not work in recovery-mode.
 **Normally** you can only run it after the `android` bootanimation. (Aka android-interface)
 !!!
 
