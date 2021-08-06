@@ -8,27 +8,27 @@
     <!-- Primary Meta Tags -->
     <title>Linux</title>
     <meta name="title" content="Linux">
-    <meta name="description" content="Need to write and even more pages ..." />
+    <meta name="description" content="Android-x86 is just a highly modified Linux. As a result, it has lot of similarities with Linux." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.supreme-gamers.com/installation/from-linux/">
     <meta property="og:title" content="Linux">
-    <meta property="og:description" content="Need to write and even more pages ...">
+    <meta property="og:description" content="Android-x86 is just a highly modified Linux. As a result, it has lot of similarities with Linux.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.supreme-gamers.com/installation/from-linux/">
     <meta property="twitter:title" content="Linux">
-    <meta property="twitter:description" content="Need to write and even more pages ...">
+    <meta property="twitter:description" content="Android-x86 is just a highly modified Linux. As a result, it has lot of similarities with Linux.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.8.681481174898" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.1.681541621047" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.681481174898" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.8" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.1.681541621047" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8.1" defer data-turbo-track="reload"></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -192,7 +192,82 @@
         <span>Linux</span>
     </h1>
 </doc-anchor-target>
-<p>Need to write and even more pages ...</p>
+<p>Android-x86 is just a highly modified Linux. As a result, it has lot of similarities with Linux. So installing Android-x86  from Linux is easier than installing from Windows where only limited number of File-System is supported. Here We will learn <code v-pre>How to install Androidx86 from Linux</code>. As a Linux user, basic command line knowledge is expected. This guide is mainly focused on <code v-pre>Ext4</code> and <code v-pre>NTFS</code> File-System. Both can be done on any.</p>
+<doc-anchor-target id="preparation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#preparation">#</doc-anchor-trigger>
+        <span>Preparation</span>
+    </h2>
+</doc-anchor-target>
+<p>To install Android-x86 we are gonna need 4 things.</p>
+<ol>
+<li>The boot-loader or Grub</li>
+<li>The ISO of course</li>
+<li>Basic terminal knowledge</li>
+</ol>
+<doc-anchor-target id="step-1-the-android-x86-folder">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-1-the-android-x86-folder">#</doc-anchor-trigger>
+        <span>Step-1 The Android-x86 Folder</span>
+    </h2>
+</doc-anchor-target>
+<p>Android-x86 can be booted from root of partition or from any folder or sub-folder. We are gonna install it in a sub-folder <code v-pre>Android_x86</code> in <code v-pre>App</code> folder in our target drive. After creating the folder copy the <code v-pre>kernel</code>,<code v-pre>ramdisk.img</code>,<code v-pre>system.img/system.sfs</code>,<code v-pre>initrd.img</code>,<code v-pre>gearlock</code>(if exists) from the ISO to the folder.</p>
+<p>And that&#x27;s step-1.</p>
+<doc-anchor-target id="step-2-the-data-partition">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-2-the-data-partition">#</doc-anchor-trigger>
+        <span>Step-2 The Data Partition</span>
+    </h2>
+</doc-anchor-target>
+<p>Since Android-x86 is Linux inside, it natively supports <code v-pre>Ext4</code>. So we can just make a folder named <code v-pre>data</code> in our <code v-pre>Android-x86</code> folder.</p>
+<doc-anchor-target id="note-for-otherfs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#note-for-otherfs">#</doc-anchor-trigger>
+        <span>Note for OtherFS</span>
+    </h3>
+</doc-anchor-target>
+<p>You need to create <code v-pre>data.img</code> as Android-x86 being a striped down Linux, natively supports only <code v-pre>ext4</code> File-System. So just a folder named <code v-pre>data</code> will not do. To create <code v-pre>data.img</code></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none"># Use dd to create data.img
+dd if=/dev/zero of=./data.img bs=8G count=0 skip=1
+# Replace 8G with whatever size you want
+
+# Format the file with ext4 filesystem
+mkfs.ext4 ./data/img</code></pre>
+</doc-codeblock></div>
+<p>Warning: Pleas don&#x27;t use <code v-pre>data.img</code> of one installation on another. Create a fresh data on every install. Or the system might not boot.</p>
+<doc-anchor-target id="step-3-the-bootloader">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-3-the-bootloader">#</doc-anchor-trigger>
+        <span>Step-3 The Bootloader</span>
+    </h2>
+</doc-anchor-target>
+<p>Now the last part. Install Grub2 and open <code v-pre>nano</code> or some text-editor as root. Edit the file <code v-pre>/boot/grub/grub.cfg</code> and add these line to the end.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">menuentry 'Android-x86' {
+set android=/FOLDER_NAME
+insmod all_video 
+search --set=root --file $android/kernel 
+linux $android/kernel quiet root=/dev/ram0 androidboot.selinux=permissive acpi_sleep=s3_bios,s3_mode SRC=$android
+initrd $android/initrd.img
+}</code></pre>
+</doc-codeblock></div>
+<p>At first line, replace <code v-pre>Android-x86</code> with what ever you want to show at Grub menu. And replace FOLDER_NAME with the folder path to your Android-x86 system. For this case it is <code v-pre>/App/Android_x86</code>. Add any kernel configuration you have after <code v-pre>SRC=$android</code>in same line.</p>
+<p>Warning: Pleas be extra careful as failing to write properly might make grub menu not accessible. This will lead to grub shell.</p>
+<doc-anchor-target id="step-4-another-step">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-4-another-step">#</doc-anchor-trigger>
+        <span>Step-4 Another Step?</span>
+    </h2>
+</doc-anchor-target>
+<p>No this is just some warnings and tips for your better experience.</p>
+<ol>
+<li>There is no such thing as best Android-x86. If the system runs slow, try changing the kernel/mesa or apply some tweaks from <code v-pre>gearlock</code> or <code v-pre>lspeed</code>,<code v-pre>FDE</code>.</li>
+<li>There is no such thing as best kernel/mesa. Each device works with specific kernel. Some devices works on all. And there&#x27;s no magic word to tell which will work for your device. Just pick 4.19 series of kernel and mesa 18 and try to go up and down.</li>
+<li>If you got NVidia GPU, pray to God that it works or just use emulator if GPU is good enough.</li>
+<li>Install kernel/mesa from <code v-pre>gearlock recovery</code>.</li>
+</ol>
+<p>Happy Gaming ;)</p>
 
 
 
