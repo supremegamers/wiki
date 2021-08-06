@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.8.1.681541621047" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.1.681573405809" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.1.681541621047" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.1.681573405809" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.8.1" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.1.681541621047" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.1.681573405809" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -202,6 +202,7 @@
 <p>GearDump is an automated log collection tool to help boost the debugging process on user-reported issues. It was originally made for GearLock but now it can be helpful for the whole operating-system log collection as well.</p>
 <ul>
 <li>Press ALT+F1 or use any terminal <a href="https://play.google.com/store/apps/details?id=com.termoneplus">emulator</a>/tty.</li>
+<li>If you can&#x27;t boot into the android-GUI then get into recovery mode from your grub menu and open <code v-pre>Virtual Command Terminal</code> there.</li>
 <li>Run <code v-pre>geardump</code> command.</li>
 <li>Then you can find the <strong>zipball</strong> at both <code v-pre>/data</code> and at the root of your <code v-pre>operating-system-Partition</code>. You may grab it from one of these suitable locations in your favor.</li>
 </ul>
