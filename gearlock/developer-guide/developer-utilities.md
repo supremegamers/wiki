@@ -491,7 +491,9 @@ Usage: garca <command> <switches> <archive_name>
 get_base_dir
 ------------
 
-Warning! This is a GearLock-Only function. You can not use it outside GearLock.
+!!!warning Warning
+This is a GearLock-Only function. You can not use it outside GearLock.
+!!!
 
 When you call the function `get_base_dir` from a script,<br>it return's the base directory path from where that script is being executed in `$BD` variable.
 
@@ -500,7 +502,9 @@ When you call the function `get_base_dir` from a script,<br>it return's the base
 get_net_stat
 ------------
 
-Warning! This is a GearLock-Only function. You can not use it outside GearLock.
+!!!warning Warning
+This is a GearLock-Only function. You can not use it outside GearLock.
+!!!
 
 When you call the function `get_net_stat` from a script
 
