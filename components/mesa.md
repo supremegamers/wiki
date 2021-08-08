@@ -17,7 +17,8 @@ Gallium HUD
 
 On Android-x86, Gallium HUD can be enabled on Mesa 18.1+ if you are using AMD GPUs or Nvidia GPUs (nouveau). On Intel GPUs, Gallium HUD can be enabled on Gen8+ using Mesa's new `iris` graphic driver. On older Intel GPUs, with the new `crocus` driver you can now be able to use it too.
 
-For all Intel GPUs I recommend using the upcoming Mesa 21.2 if you want to try to experience this feature. 
+For all Intel GPUs I recommend using the upcoming Mesa 21.2 if you want to try to experience this feature.
+
 If you wonder which Intel GPU you are using (different from CPU gen) then you can check this wikipedia page : https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units
 
 To easily activate Gallium HUD on any Android-x86 build, go to `/system/etc/init/surfaceflinger.rc`
