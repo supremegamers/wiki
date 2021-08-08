@@ -58,7 +58,7 @@ initrd $android/initrd.img
 At first line, replace `Android-x86` with what ever you want to show at Grub menu. And replace FOLDER_NAME with the folder path to your Android-x86 system. For this case it is `/App/Android_x86`. Add any kernel configuration you have after `SRC=$android`in same line. 
 
 !!!warning Warning
-Pleas be extra careful as failing to write properly might make grub menu not accessible. This will lead to grub shell.
+Please be extra careful as failing to write properly might make grub menu not accessible. This will lead to grub shell.
 !!!
 
 ## Step-4 Another Step?

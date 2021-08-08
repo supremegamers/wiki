@@ -44,7 +44,7 @@ You don't need to create `data.img` as Androidx86 natively supports this File-Sy
 
 ## Step-3 The Bootloader
 
-Now the last part. Install Grub2win from [here](https://sourceforge.net/projects/grub2win/). Pleas don't use any external links as there are reports of malware injected inside them. After installation open Grub2win. Go to `Manage boot menu` and select `Add entry`. Select type as Android, Give a name and at last click the `Select A new Android Kernel File` button. This will open a explorer. Now browse to the folder where we copied the files from ISO and open the kernel file. The texts in box 1 and 2 should change according to your folder. Append any kernel parameter you want to add to box 2. Hit apply and your done.
+Now the last part. Install Grub2win from [here](https://sourceforge.net/projects/grub2win/). Please don't use any external links as there are reports of malware injected inside them. After installation open Grub2win. Go to `Manage boot menu` and select `Add entry`. Select type as Android, Give a name and at last click the `Select A new Android Kernel File` button. This will open a explorer. Now browse to the folder where we copied the files from ISO and open the kernel file. The texts in box 1 and 2 should change according to your folder. Append any kernel parameter you want to add to box 2. Hit apply and your done.
 
 ![image](g2w.png)
 
