@@ -19,40 +19,30 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
-          
+
       #- name: Clean existing retype branch
         #run: |
           #git push -d origin retype
-          
+
       - name: Symlink stuff for redirecton
         run: |
           _links=(
               "gearlock/user-guide/getting-geardump.md|common-issues/gathering-logs.md"
           )
-          
+
           exit 0; # Temporarily disable this
 
           for _link in "${_links[@]}"; do {
               _caller="${_link%%|*}";
               _target="${_link##*|}";
-              
+
               ln -srf "$_target" "$_caller";
-              
+
               unset _caller _target;
           } done
-          
-      
+
+
       - uses: retypeapp/action-build@v1
-      
-      - name: Change /blob/ with /edit/
-        run: |
-          # Change /blob/ route to /edit/
-          _retype_tmpdir="$(find /tmp/tmp* -mindepth 0 -maxdepth 1 -type f \( -name "404.html" -o -name "index.html" \) | head -n1)";
-          cd "${_retype_tmpdir%/*}";
-          while read -r _file; do {
-              sed -i 's|https://github.com/supremegamers/wiki/blob/main/|https://github.com/supremegamers/wiki/edit/main/|g' "$_file";
-          } done < <(grep -lr 'https://github.com/supremegamers/wiki/blob/main/')
-          
 
       - uses: retypeapp/action-github-pages@v1
         with:
