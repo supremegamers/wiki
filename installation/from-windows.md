@@ -35,7 +35,7 @@ Use a partition manager to format partition as ext4. Than use Ext2fsd to assign 
 Use any tool or the `makeData` tool to create `data.img` file. This will serve as the SD-card for the system. `makeData` will ask for SD-card size in GB. Provide at least 8 GB for efficient gaming. Now move that created data file to the folder where we copied files from ISO to(Android_x86 folder in App folder).
 
 !!!warning Warning
-Pleas don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
+Please don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
 !!!
 
 ### Note for Ext4

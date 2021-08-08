@@ -38,7 +38,7 @@ mkfs.ext4 ./data/img
 ```
 
 !!!warning Warning
-Pleas don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
+Please don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
 !!!
 
 ## Step-3 The Bootloader
