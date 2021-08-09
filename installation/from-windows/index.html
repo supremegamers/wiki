@@ -27,10 +27,10 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.8.1.681573405809" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.2.681793331608" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.1.681573405809" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.8.1" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.681793331608" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -232,7 +232,23 @@
     </h2>
 </doc-anchor-target>
 <p>Use any tool or the <code v-pre>makeData</code> tool to create <code v-pre>data.img</code> file. This will serve as the SD-card for the system. <code v-pre>makeData</code> will ask for SD-card size in GB. Provide at least 8 GB for efficient gaming. Now move that created data file to the folder where we copied files from ISO to(Android_x86 folder in App folder).</p>
-<p>Warning: Pleas don&#x27;t use <code v-pre>data.img</code> of one installation on another. Create a fresh data on every install. Or the system might not boot.</p>
+<div class="flex mb-6">
+    <div class="flex-shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3">
+            <h5>Warning</h5>
+<p>Please don&#x27;t use <code v-pre>data.img</code> of one installation on another. Create a fresh data on every install. Or the system might not boot.</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="note-for-ext4-1">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#note-for-ext4-1">#</doc-anchor-trigger>
@@ -246,7 +262,7 @@
         <span>Step-3 The Bootloader</span>
     </h2>
 </doc-anchor-target>
-<p>Now the last part. Install Grub2win from <a href="https://sourceforge.net/projects/grub2win/">here</a>. Pleas don&#x27;t use any external links as there are reports of malware injected inside them. After installation open Grub2win. Go to <code v-pre>Manage boot menu</code> and select <code v-pre>Add entry</code>. Select type as Android, Give a name and at last click the <code v-pre>Select A new Android Kernel File</code> button. This will open a explorer. Now browse to the folder where we copied the files from ISO and open the kernel file. The texts in box 1 and 2 should change according to your folder. Append any kernel parameter you want to add to box 2. Hit apply and your done.</p>
+<p>Now the last part. Install Grub2win from <a href="https://sourceforge.net/projects/grub2win/">here</a>. Please don&#x27;t use any external links as there are reports of malware injected inside them. After installation open Grub2win. Go to <code v-pre>Manage boot menu</code> and select <code v-pre>Add entry</code>. Select type as Android, Give a name and at last click the <code v-pre>Select A new Android Kernel File</code> button. This will open a explorer. Now browse to the folder where we copied the files from ISO and open the kernel file. The texts in box 1 and 2 should change according to your folder. Append any kernel parameter you want to add to box 2. Hit apply and your done.</p>
 <p><figure class="content-center">
     <img src="../g2w.png" alt="image" />
     <figcaption class="caption">image</figcaption>
@@ -316,7 +332,7 @@
 </ul>
 
     </div>
-    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© Copyright SupremeGamers 2021. All rights reserved.</p>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>Copyright SupremeGamers 2021. All rights reserved.</p>
 </div>
 </footer>
 
