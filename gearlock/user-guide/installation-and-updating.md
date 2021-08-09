@@ -62,7 +62,7 @@ I seriously don't prefer to follow video guides, only mentioning them here just 
 These video tutorials can be outdated, proceed at your own risk!
 !!!
 
-- https://www.youtube.com/watch?v=tg_lLrGaoYE
+[!embed](https://www.youtube.com/watch?v=tg_lLrGaoYE)
 
 # Troubleshooting
 

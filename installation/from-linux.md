@@ -37,9 +37,9 @@ dd if=/dev/zero of=./data.img bs=8G count=0 skip=1
 mkfs.ext4 ./data/img
 ```
 
-
-
-Warning: Pleas don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
+!!!warning Warning
+Please don't use `data.img` of one installation on another. Create a fresh data on every install. Or the system might not boot.
+!!!
 
 ## Step-3 The Bootloader
 
@@ -57,7 +57,9 @@ initrd $android/initrd.img
 
 At first line, replace `Android-x86` with what ever you want to show at Grub menu. And replace FOLDER_NAME with the folder path to your Android-x86 system. For this case it is `/App/Android_x86`. Add any kernel configuration you have after `SRC=$android`in same line. 
 
-Warning: Pleas be extra careful as failing to write properly might make grub menu not accessible. This will lead to grub shell.
+!!!warning Warning
+Please be extra careful as failing to write properly might make grub menu not accessible. This will lead to grub shell.
+!!!
 
 ## Step-4 Another Step?
 

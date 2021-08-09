@@ -1,0 +1,18 @@
+input: .
+output: .retype
+branding:
+  title: SupremeGamers
+  label: Wiki
+favicon: static/favicon.png
+cname: wiki.supreme-gamers.com
+edit:
+  repo: https://github.com/supremegamers/wiki/edit/
+links:
+  - text: Forum
+    link: https://supreme-gamers.com
+  - text: Discord
+    link: https://supreme-gamers.com/discord/invite
+  - text: Youtube
+    link: https://www.youtube.com/c/SupremeGamers
+footer:
+  copyright: &copy; Copyright SupremeGamers {{ year }}. All rights reserved.
