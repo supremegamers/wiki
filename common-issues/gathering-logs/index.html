@@ -25,11 +25,11 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.8.2.681793331608" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.8.2.682757884362" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.681793331608" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.682757884362" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.2.681793331608" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.2.682757884362" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -303,7 +303,8 @@ cd /data/mylogs</code></pre>
 <pre class="language-bash"><code v-pre class="language-bash">tar -cf logs.tar *</code></pre>
 </doc-codeblock></div>
 </doc-panel>
-<p>Now lets find the archived <code v-pre>logs.tar</code> file for uploading to a dev</p>
+<doc-panel id="now-lets-find-the-archived-logs-tar-file-for-uploading-to-a-dev">
+    <template #title>Now lets find the archived <code v-pre>logs.tar</code> file for uploading to a dev</template>
 <doc-tabs>
 <doc-tab id="from-booted-android-system">
 <template #title>From Booted Android System</template>
@@ -354,6 +355,7 @@ E.g <strong>Paragon LinuxFS</strong>, <strong>Ext2fsd</strong></p>
 </div>
 </doc-tab>
 </doc-tabs>
+</doc-panel>
 
 
 
