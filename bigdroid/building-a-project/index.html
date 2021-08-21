@@ -6,21 +6,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>gxpm - The GearLock Package Manager</title>
-    <meta name="title" content="gxpm - The GearLock Package Manager">
-    <meta name="description" content="Need to write and even more pages ..." />
+    <title>Building a Bigdroid Project</title>
+    <meta name="title" content="Building a Bigdroid Project">
+    <meta name="description" content="Host utilities:" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wiki.supreme-gamers.com/gearlock/user-guide/gxpm-gearlock-package-manager/">
-    <meta property="og:title" content="gxpm - The GearLock Package Manager">
-    <meta property="og:description" content="Need to write and even more pages ...">
+    <meta property="og:url" content="https://wiki.supreme-gamers.com/bigdroid/building-a-project/">
+    <meta property="og:title" content="Building a Bigdroid Project">
+    <meta property="og:description" content="Host utilities:">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wiki.supreme-gamers.com/gearlock/user-guide/gxpm-gearlock-package-manager/">
-    <meta property="twitter:title" content="gxpm - The GearLock Package Manager">
-    <meta property="twitter:description" content="Need to write and even more pages ...">
+    <meta property="twitter:url" content="https://wiki.supreme-gamers.com/bigdroid/building-a-project/">
+    <meta property="twitter:title" content="Building a Bigdroid Project">
+    <meta property="twitter:description" content="Host utilities:">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -29,6 +29,7 @@
 
     <script type="text/javascript" src="/resources/js/config.js?v=1.8.2.682844696997" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/resources/js/retype.js?v=1.8.2" defer data-turbo-track="reload"></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.8.2.682844696997" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -186,13 +187,89 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="gxpm---the-gearlock-package-manager" class="break-words">
+<doc-anchor-target id="building-a-bigdroid-project" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#gxpm---the-gearlock-package-manager">#</doc-anchor-trigger>
-        <span>gxpm - The GearLock Package Manager</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#building-a-bigdroid-project">#</doc-anchor-trigger>
+        <span>Building a Bigdroid Project</span>
     </h1>
 </doc-anchor-target>
-<p>Need to write and even more pages ...</p>
+<doc-anchor-target id="prerequisites">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#prerequisites">#</doc-anchor-trigger>
+        <span>Prerequisites</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Host utilities:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">sudo apt install -y git curl rsync cpio coreutils e2fsprogs findutils grep wget file squashfs-tools genisoimage p7zip</code></pre>
+</doc-codeblock></div>
+<ul>
+<li><a href="https://github.com/bashbox/bashbox">Bashbox</a>:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">curl --proto '=https' --tlsv1.2 -sSfL &quot;https://git.io/Jc9bH&quot; | bash -s selfinstall</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>Bigdroid:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">bashbox install bigdroid</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="buildingcompiling">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buildingcompiling">#</doc-anchor-trigger>
+        <span>Building/Compiling</span>
+    </h2>
+</doc-anchor-target>
+<p>In this example we will build PhoenixOS DarkMatter.</p>
+<p>At first we clone the project repository:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">git clone https://github.com/supremegamers/darkmatter</code></pre>
+</doc-codeblock></div>
+<p>Now there are <del>three</del> two ways you can invoke the build command:</p>
+<ul>
+<li>You can cd into the repository dir and then run it:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">cd darkmatter
+bigdroid build --release</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>Or you can directly pass the dir path in bigdroid without changing your PWD:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">bigdroid build --release darkmatter</code></pre>
+</doc-codeblock></div>
+<p>Then you should find the output iso in <code v-pre>target/release</code>.</p>
+<doc-anchor-target id="advanced-build-command-options">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-build-command-options">#</doc-anchor-trigger>
+        <span>Advanced build command options</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>If you do not want to compress <code v-pre>system.img</code> with squashfs:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">bigdroid build --no-squashfs --release</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>If you want to stop the build process after injecting the hooks:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">bigdroid build --hooks-only --release</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>If you do not want to build ISO and stop at <code v-pre>system.img</code> creation:</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">bigdroid build --image-only --release</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>Protip: Try <code v-pre>bigdroid build --help</code></p>
+</blockquote>
 
 
 
@@ -202,7 +279,7 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/gearlock/user-guide/gxpm-gearlock-package-manager.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/supremegamers/wiki/edit/main/bigdroid/building-a-project.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -212,20 +289,20 @@
 
 <nav class="flex mt-14">
     <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/user-guide/">
+        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/bigdroid/">
             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
             <span>
                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">User Guide</span>
+                <span class="block mt-1">Bootloader facts</span>
             </span>
         </a>
     </div>
 
     <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/gearlock/user-guide/installation-and-updating/">
+        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/bigdroid/developer-guide/">
             <span>
                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">Installation and Updating</span>
+                <span class="block mt-1">Developer GUide</span>
             </span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         </a>
@@ -273,6 +350,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "gxpm - The GearLock Package Manager", icon: "file", hasPrism: false, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Building a Bigdroid Project", icon: "file", hasPrism: true, hasMermaid: false }</script>
     </body>
 </html>
