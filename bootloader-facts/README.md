@@ -1,7 +1,7 @@
 ---
 label: Bootloader facts
 icon: download
-order: -600
+order: -700
 ---
 
 ### Chapter
