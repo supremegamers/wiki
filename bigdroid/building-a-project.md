@@ -11,7 +11,7 @@ order: -100
 +++ ArchLinux
 
 ```bash
-sudo apt install -y git curl rsync cpio coreutils e2fsprogs findutils grep wget file squashfs-tools cdrtools p7zip
+sudo pacman -Sy git curl rsync cpio coreutils e2fsprogs findutils grep wget file squashfs-tools cdrtools p7zip
 ```
 
 +++ Debian/Ubuntu
