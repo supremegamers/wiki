@@ -7,9 +7,20 @@ order: -100
 ## Prerequisites
 
 - Host utilities:
+
++++ ArchLinux
+
+```bash
+sudo apt install -y git curl rsync cpio coreutils e2fsprogs findutils grep wget file squashfs-tools cdrtools p7zip
+```
+
++++ Debian/Ubuntu
+
 ```bash
 sudo apt install -y git curl rsync cpio coreutils e2fsprogs findutils grep wget file squashfs-tools genisoimage p7zip
 ```
+
++++
 
 - [Bashbox](https://github.com/bashbox/bashbox):
 ```bash
