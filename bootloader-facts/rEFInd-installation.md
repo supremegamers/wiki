@@ -21,7 +21,7 @@ menuentry "Darkmatter" {
     options "root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive SRC=/"
 }
 ```
-Edit the location on required files if you have installed your OS in any other custom location.
+Edit the location of required files if you have installed your OS in any other custom location.
 
 ## Windows Installation
 If you done downloading all required packages for windows, we're good-to-go for further steps.
@@ -71,7 +71,8 @@ menuentry "Darkmatter" {
     options "root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive SRC=/"
 }
 ```
-Edit the location on required files if you have installed your OS in any other custom location.
+Edit the location of required files if you have installed your OS in any other custom location.
+
 3) Now save the file and reboot your system.
 
 
