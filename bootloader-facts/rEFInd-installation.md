@@ -33,9 +33,10 @@ If you done downloading all required packages for windows, we're good-to-go for 
 6) After new popup appears, setlect the <b>Type</b> as `Unix or Other OS`, Type "refind" in <b>Description</b> and navigate to fat32 <b>EFI</b> partition, select `\refind\refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit CPUs and click ok to save changes.
 7) Now a new boot entry with name "refind" will be created, select it and click on move up(button with small up arrow), click it untill "refind" boot menu reach at the top of all other boot menus. This will set rEFInd as our default bootloader.
 8) Lastly click on <b>Home</b> button and then close the EasyUEFI programm.
-9) Now reboot to bios and select `boot Sequence`, click on <b>Add New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
-10) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
-11) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow the following steps
+
+#### Steps if refind does't bootup
+1) Reboot to bios and select `boot Sequence`.If refind is already on the top of every other boot entry then click on save else select refind, click up arrow untill refind reaches the top of all other boot entries and Save it.
+2) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
 
 ## Linux Installation
 If you done editing `refind.conf` then start following further steps.
