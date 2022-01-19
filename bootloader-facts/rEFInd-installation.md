@@ -7,7 +7,7 @@ taxonomy:
 
 Here we are gonna learn how to install rEFInd from both Windows and Linux. Please note that it is recommended to know how to use terminal and have basic knowledge of partition in order to install rEFInd. If you don't know how, just follow evey step exactly like we do.
 
-## Getting grub
+## Getting rEFInd
 If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
 ## Preparation
