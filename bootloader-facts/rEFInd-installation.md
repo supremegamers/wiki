@@ -40,7 +40,7 @@ Reboot to bios and select `boot Sequence`.If refind is already on the top of eve
 ## Linux Installation
 You can install rEFInd on linux via terminal or even manually.
 ### Install through terminal
-1) Press ``CTRL + T`` to open terminal and type these commands-
+1) Press ``CTRL + ALT + T`` to open terminal and type these commands-
 ``` 
 ### for Ubuntu users
 
