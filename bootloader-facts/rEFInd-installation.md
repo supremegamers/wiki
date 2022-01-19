@@ -32,15 +32,14 @@ If you done downloading all required packages for windows, we're good-to-go for 
 5) Click on <b>Exit</b> > <b>Home</b> to go back to main screen, select `Manage EFI Boot Options` and click on <b>Create new entry</b>(Button with small '+' sign).
 6) After new popup appears, setlect the <b>Type</b> as `Unix or Other OS`, Type "refind" in <b>Description</b> and navigate to fat32 <b>EFI</b> partition, select `\refind\refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit CPUs and click ok to save changes.
 7) Now a new boot entry with name "refind" will be created, select it and click on move up(button with small up arrow), click it untill "refind" boot menu reach at the top of all other boot menus. This will set rEFInd as our default bootloader.
-8) Lastly click on <b>Home</b> button and then close the EasyUEFI programm.
+8) Lastly click on <b>Home</b> button and then close the EasyUEFI program.
 
-#### Steps if refind does't bootup
-1) Reboot to bios and select `boot Sequence`.If refind is already on the top of every other boot entry then click on save else select refind, click up arrow untill refind reaches the top of all other boot entries and Save it.
-2) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
+#### If rEFInd does't bootup
+Reboot to bios and select `boot Sequence`.If refind is already on the top of every other boot entry then click on save else select refind, click up arrow untill refind reaches the top of all other boot entries and then Save it.
 
 ## Linux Installation
-If you done editing `refind.conf` then start following further steps.
-### Install With terminal
+You can install rEFInd on linux via terminal or even manually.
+### Install through terminal
 If you want to install rEFInd with terminal-
 1) Press ``CTRL + T`` to open terminal and type these commands-
 ``` 
@@ -50,19 +49,8 @@ sudo apt install refind
 
 ### for Arch linux users you can check the official post from ArchWiki (https://wiki.archlinux.org/title/REFInd) 
 ```
-This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
-
-### Install manually
-If you done Download required rEFInd packages, follow these steps-
-1) Extract refind file into desktop and rename it to "refind"
-2) Open any filemanger as root and copy "refind" file to `/boot/efi/EFI/refind`.
-3) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
-4) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
-5) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
-
-## Setup Darkmatter BootEntry
-1) now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
-2) Edit `refind.conf` and add these text at the end of the file-
+2) Now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
+3) Edit `refind.conf` and add these text at the end of the file-
 ``` 
 menuentry "Darkmatter" {
     icon /EFI/refind/darkmatter.png
@@ -73,6 +61,18 @@ menuentry "Darkmatter" {
 }
 ```
 Edit the location of required files if you have installed your OS in any other custom location.
+4) Save the file and reboot.
+
+### Install manually
+If you done Download required rEFInd packages, follow these steps-
+1) Extract refind file into desktop and rename it to "refind"
+2) Open any filemanger as root and copy "refind" file to `/boot/efi/EFI/refind`.
+3) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
+4) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
+5) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
+
+## Setup Darkmatter BootEntry
+
 
 3) Now save the file and reboot your system.
 
