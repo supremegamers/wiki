@@ -40,7 +40,6 @@ Reboot to bios and select `boot Sequence`.If refind is already on the top of eve
 ## Linux Installation
 You can install rEFInd on linux via terminal or even manually.
 ### Install through terminal
-If you want to install rEFInd with terminal-
 1) Press ``CTRL + T`` to open terminal and type these commands-
 ``` 
 ### for Ubuntu users
@@ -70,12 +69,6 @@ If you done Download required rEFInd packages, follow these steps-
 3) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
 4) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
 5) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
-
-## Setup Darkmatter BootEntry
-
-
-3) Now save the file and reboot your system.
-
 
 
 ## Finally!!
