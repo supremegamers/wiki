@@ -15,7 +15,7 @@ Now we are gonna learn how to install rEFInd from both Windows and Linux. Please
 If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
 ## <a name="goto1">Preparation</a>
-Before moving forward we first need to do some minor preparation for both Windows and Linux users. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` file and paste the following text at the end of the file.
+Before moving forward we first need to do some minor preparation for both Windows and Linux users who want to install rEFInd manually. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` file and paste the following text at the end of the file.
 ```
 menuentry "Darkmatter" {
     icon /EFI/refind/darkmatter.png
@@ -78,12 +78,12 @@ Edit the location of required files if you have installed your OS in any other c
 4) Save the file and reboot.
 
 ### Install manually
-If you done all [Preparation](goto1), follow these steps-
-1) Extract refind file into desktop and rename it to "refind"
+If you done all [Preparation](#goto1), follow these steps-
+1) Copy "refind" folder we extracted in Desktop.
 2) Open any filemanger as root and copy "refind" file to `/boot/efi/EFI/refind`.
-3) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
-4) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
-5) Now reboot. This will just install refind, To setup Darkmatter boot entry in rEFInd follow `## Setup Darkmatter BootEntry`
+4) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit CPUs.
+5) Now click on save, select refind and click up arrow untill refind reaches the top of all other boot options.
+6) Now reboot!
 
 
 ## Finally!!
