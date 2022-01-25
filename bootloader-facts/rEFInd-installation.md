@@ -1,21 +1,25 @@
 ---
-title: 'rEFInd Installation'
+title: 'rEFInd'
 taxonomy:
     category:
         - docs
 ---
+### What is rEFInd?
+rEFInd is a GUI based boot manager for UEFI and EFI-based machines. It can be used to boot multiple operating systems that are installed on a single device. It also provide some basic theme Customisation options.
 
-Here we are gonna learn how to install rEFInd from both Windows and Linux. Please note that it is recommended to know how to use terminal and have basic knowledge of partition in order to install rEFInd. If you don't know how, just follow evey step exactly like we do.
+
+# Installation
+Now we are gonna learn how to install rEFInd from both Windows and Linux. Please note that it is recommended to know how to use terminal and have basic knowledge of partition in order to install rEFInd.
 
 ## Getting rEFInd
 If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
-## Preparation
+## <a name="goto1">Preparation</a>
 Before moving forward we first need to do some minor preparation for both Windows and Linux users. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` file and paste the following text at the end of the file.
 ```
 menuentry "Darkmatter" {
     icon /EFI/refind/darkmatter.png
-    volume /
+    volume 
     loader /kernel
     initrd /initrd.img
     options "root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive SRC=/"
@@ -40,13 +44,24 @@ Reboot to bios and select `boot Sequence`.If refind is already on the top of eve
 ## Linux Installation
 You can install rEFInd on linux via terminal or even manually.
 ### Install through terminal
-1) Press ``CTRL + ALT + T`` to open terminal and type these commands-
+1) Press ``CTRL + ALT + T`` to open terminal and then type these commands-
 ``` 
-### for Ubuntu users
+# for Ubuntu and Debain users
 
 sudo apt install refind    
 
-### for Arch linux users you can check the official post from ArchWiki (https://wiki.archlinux.org/title/REFInd) 
+# for Arch linux users
+
+sudo pacman -S refind
+
+# for Mageia linux users
+
+sudo urpmi refind
+
+```
+rEFInd instllation start automatically if not then type-
+```
+cd /usr/share/refind/ && sudo ./refind-install
 ```
 2) Now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
 3) Edit `refind.conf` and add these text at the end of the file-
@@ -63,7 +78,7 @@ Edit the location of required files if you have installed your OS in any other c
 4) Save the file and reboot.
 
 ### Install manually
-If you done Download required rEFInd packages, follow these steps-
+If you done all [Preparation](goto1), follow these steps-
 1) Extract refind file into desktop and rename it to "refind"
 2) Open any filemanger as root and copy "refind" file to `/boot/efi/EFI/refind`.
 3) now reboot to bios and select `boot Sequence`, click on <b>New Entry</b> button and name it "refind" and select location of the boot file `/EFI/refind/refind_x64.efi` for 64 bit or `\refind\refind_ia32.efi` for 32 bit GPUs.
