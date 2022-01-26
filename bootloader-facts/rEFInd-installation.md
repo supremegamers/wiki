@@ -15,10 +15,9 @@ Now we are gonna learn how to install rEFInd from both Windows and Linux. Please
 If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
 ## <a name="goto1">Preparation</a>
-Before moving forward we first need to do some minor preparation for both Windows and Linux users who want to install rEFInd manually. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` file and paste the following text at the end of the file.
+Before moving forward we first need to do some minor preparation for both Windows and Linux users who want to install rEFInd manually. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` and add the following text at the end of the file.
 ```
 menuentry "Darkmatter" {
-    icon /EFI/refind/darkmatter.png
     volume 
     loader /kernel
     initrd /initrd.img
@@ -61,20 +60,20 @@ sudo urpmi refind
 ```
 rEFInd instllation start automatically if not then type-
 ```
-cd /usr/share/refind/ && sudo ./refind-install
+sudo refind-install
 ```
 2) Now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
-3) Edit `refind.conf` and add these text at the end of the file-
+3) Edit `refind.conf` and add following text at the end of the file-
 ``` 
 menuentry "Darkmatter" {
-    icon /EFI/refind/darkmatter.png
-    volume /
+    volume 
     loader /kernel
     initrd /initrd.img
     options "root=/dev/ram0 androidboot.hardware=android_x86_64 androidboot.selinux=permissive SRC=/"
 }
 ```
 Edit the location of required files if you have installed your OS in any other custom location.
+
 4) Save the file and reboot.
 
 ### Install manually
