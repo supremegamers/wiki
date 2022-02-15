@@ -59,7 +59,8 @@ sudo pacman -S refind
 > 2) If you choose `rpm` then type ```sudo rpm -i refind*.rpm```
 > 3) If you choose `dbm` then type ```sudo dpkg -i refind*.deb```
 
-rEFInd instllation start automatically if not then type-```
+rEFInd instllation start automatically if not then type-
+```
 sudo refind-install
 ```
 2) Now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
