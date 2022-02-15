@@ -12,7 +12,7 @@ rEFInd is a GUI based boot manager for UEFI and EFI-based machines. It can be us
 Now we are gonna learn how to install rEFInd from both Windows and Linux. Please note that it is recommended to know how to use terminal and have basic knowledge of partition in order to install rEFInd.
 
 ## Getting rEFInd
-If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
+If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/files/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/files/)(downlaod latest zip file) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
 ## <a name="goto1">Preparation</a>
 Before moving forward we first need to do some minor preparation for both Windows and Linux users who want to install rEFInd manually. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` and add the following text at the end of the file.
