@@ -12,7 +12,7 @@ rEFInd is a GUI based boot manager for UEFI and EFI-based machines. It can be us
 Now we are gonna learn how to install rEFInd from both Windows and Linux. Please note that it is recommended to know how to use terminal and have basic knowledge of partition in order to install rEFInd.
 
 ## Getting rEFInd
-If you'r in Linux you can either use terminal(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/files/). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/files/)(downlaod latest zip file) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
+If you'r in Linux you can use [terminal-installation](#goto2)(recommended) or even install it manually from [here](https://sourceforge.net/projects/refind/files/)(downlaod latest zip file). If you'r in windows, you have to install refind packages and some other softwares manually. Install rEFInd from [here](https://sourceforge.net/projects/refind/files/)(downlaod latest zip file) and EasyUEFI from [here](https://getintopc.com.pk/softwares/utilities/easyuefi-technician-free-download/).
 
 ## <a name="goto1">Preparation</a>
 Before moving forward we first need to do some minor preparation for both Windows and Linux users who want to install rEFInd manually. After downlading rEFInd package, Extract it to your Desktop and rename it to "refind", open it, edit `refind.conf` and add the following text at the end of the file.
@@ -42,7 +42,7 @@ Reboot to bios and select `boot Sequence`.If refind is already on the top of eve
 
 ## Linux Installation
 You can install rEFInd on linux via terminal or even manually.
-### Install through terminal
+### <a name="goto2">Install through terminal</a>
 1) Press ``CTRL + ALT + T`` to open terminal and then type these commands-
 ``` 
 # for Ubuntu and Debain users
@@ -53,13 +53,13 @@ sudo apt install refind
 
 sudo pacman -S refind
 
-# for Mageia linux users
-
-sudo urpmi refind
-
 ```
-rEFInd instllation start automatically if not then type-
-```
+> If you're fedora, Mageia or other linux user then follow these steps-
+> 1) Go to this [link](https://sourceforge.net/projects/refind/files) and download latest `rpm` or `deb` file according to your system.
+> 2) If you choose `rpm` then type ```sudo rpm -i refind*.rpm```
+> 3) If you choose `dbm` then type ```sudo dpkg -i refind*.deb```
+
+rEFInd instllation start automatically if not then type-```
 sudo refind-install
 ```
 2) Now after your rEFInd is installed on your distro, open any filemanager as root and navigate to `/boot/efi/EFI/refind`.
