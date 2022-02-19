@@ -25,11 +25,12 @@
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.9.685563210861" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.698593941358" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.9.685563210861" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.9.685563210861" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.698593941358" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.698593941358" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.698593941358" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -78,7 +79,7 @@
                     </div>
 
                     <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
-                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
                 </div>
 
                 <!-- Mobile search button mock -->
@@ -125,9 +126,10 @@
         <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
     </div>
 
+
     <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
         <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -162,8 +164,9 @@
                 </nav>
             </div>
 
+
             <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -200,7 +203,7 @@
         <span>GEARLOCKRC</span>
     </h2>
 </doc-anchor-target>
-<p><a href="../environment-variables/#ghome">$GHOME</a>/<strong>.gearlockrc</strong> file gets loaded by GearLock core and it contains some of the GearLock settings that you can re-configure. Also, it can be used to overwite any of the core variables or functions of GearLock. This customization file can be also used to handle <code v-pre>hook</code>.</p>
+<p><a href="../environment-variables#ghome">$GHOME</a>/<strong>.gearlockrc</strong> file gets loaded by GearLock core and it contains some of the GearLock settings that you can re-configure. Also, it can be used to overwite any of the core variables or functions of GearLock. This customization file can be also used to handle <code v-pre>hook</code>.</p>
 <blockquote>
 <p>Here is the preview of default <code v-pre>gearlockrc</code> file.</p>
 </blockquote>
@@ -284,7 +287,7 @@ DEFAULT_THEME=&quot;notset&quot;
         <span>GHOME</span>
     </h2>
 </doc-anchor-target>
-<p>Read about $GHOME at <a href="../environment-variables/#ghome">Environment-Variables</a> page. If you&#x27;re a developer and want to pre-define some settings and stuff then you can have your custom <code v-pre>ghome</code> dir as <code v-pre>/system/ghome</code>.</p>
+<p>Read about $GHOME at <a href="../environment-variables#ghome">Environment-Variables</a> page. If you&#x27;re a developer and want to pre-define some settings and stuff then you can have your custom <code v-pre>ghome</code> dir as <code v-pre>/system/ghome</code>.</p>
 <doc-anchor-target id="hook">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#hook">#</doc-anchor-trigger>
@@ -292,7 +295,7 @@ DEFAULT_THEME=&quot;notset&quot;
     </h2>
 </doc-anchor-target>
 <p>If you&#x27;re a developer and willing to integrage GearLock in your android-x86 build then <code v-pre>hook</code> can be useful to you. GearLockUi default menu structure and most of the sub-elements of GearLock is <strong>dynamic</strong> and can be modified/extended easily. If you look at <code v-pre>/gearlock/core</code> and try to understand then it could be more clear to you.</p>
-<p>The concept of <code v-pre>hook</code> is pretty simple. It is mainly there to merge everything from <a href="../environment-variables/#ghome">$GHOME</a>/<strong>hook</strong>/* into <code v-pre>/gearlock/</code>.
+<p>The concept of <code v-pre>hook</code> is pretty simple. It is mainly there to merge everything from <a href="../environment-variables#ghome">$GHOME</a>/<strong>hook</strong>/* into <code v-pre>/gearlock/</code>.
 So that you can modify core files of gearlock without having to touch the actual core.</p>
 <p>You can also make the use of <code v-pre>HOOK_DEL_FILES</code> in <code v-pre>gearlockrc</code> to delete any file within <code v-pre>/gearlock/*</code> before GearLockUi runtime and loading hook.</p>
 <doc-anchor-target id="here-is-a-messy-tutorial-about-changing-or-adding-a-new-item-in-gearlock-main-menu">
@@ -307,7 +310,7 @@ So that you can modify core files of gearlock without having to touch the actual
 <ul>
 <li><p>Now if you look at <code v-pre>/gearlock/core/main.src</code> and <code v-pre>/gearlock/core/main.src/_lang_/_menu_en</code> you will realize these are what responsible for the GearLock Ui Main-Menu. It mainly calls the other sub-menus at <code v-pre>/gearlock/core/*src</code> and executes them as required.</p>
 </li>
-<li><p>Make a directory named <code v-pre>hook</code> at <a href="../environment-variables/#ghome">$GHOME</a> and then it&#x27;d be <a href="../environment-variables/#ghome">$GHOME</a>/<strong>hook</strong></p>
+<li><p>Make a directory named <code v-pre>hook</code> at <a href="../environment-variables#ghome">$GHOME</a> and then it&#x27;d be <a href="../environment-variables#ghome">$GHOME</a>/<strong>hook</strong></p>
 </li>
 <li><p>Now if you wanna add a new menu element at the main-menu there are two things that you will need to replace/add.</p>
 </li>
@@ -379,7 +382,7 @@ So that you can modify core files of gearlock without having to touch the actual
 </ul>
 
     </div>
-    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>Copyright SupremeGamers 2021. All rights reserved.</p>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>Copyright SupremeGamers 2022. All rights reserved.</p>
 </div>
 </footer>
 
@@ -410,6 +413,6 @@ So that you can modify core files of gearlock without having to touch the actual
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Integrate or customize GearLock", icon: "file", hasPrism: true, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "Integrate or customize GearLock", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>

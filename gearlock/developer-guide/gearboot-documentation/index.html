@@ -8,28 +8,29 @@
     <!-- Primary Meta Tags -->
     <title>GearBoot Documentation</title>
     <meta name="title" content="GearBoot Documentation">
-    <meta name="description" content="GearBoot is a very simple program which can run executables during boot dynamically." />
+    <meta name="description" content="GearBoot is a very simple program which can run executables during boot dynamically. GearBoot supports four different boot stages." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://wiki.supreme-gamers.com/gearlock/developer-guide/gearboot-documentation/">
     <meta property="og:title" content="GearBoot Documentation">
-    <meta property="og:description" content="GearBoot is a very simple program which can run executables during boot dynamically.">
+    <meta property="og:description" content="GearBoot is a very simple program which can run executables during boot dynamically. GearBoot supports four different boot stages.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://wiki.supreme-gamers.com/gearlock/developer-guide/gearboot-documentation/">
     <meta property="twitter:title" content="GearBoot Documentation">
-    <meta property="twitter:description" content="GearBoot is a very simple program which can run executables during boot dynamically.">
+    <meta property="twitter:description" content="GearBoot is a very simple program which can run executables during boot dynamically. GearBoot supports four different boot stages.">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="/static/favicon.png" rel="icon" />
-    <link href="/resources/css/retype.css?v=1.9.685563210861" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/resources/css/retype.css?v=1.11.2.698593941358" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/resources/js/config.js?v=1.9.685563210861" defer data-turbo-track="reload"></script>
-    <script type="text/javascript" src="/resources/js/retype.js?v=1.9" defer data-turbo-track="reload"></script>
-    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.9.685563210861" defer></script>
+    <script type="text/javascript" src="/resources/js/config.js?v=1.11.2.698593941358" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
+    <script id="lunr-js" type="text/javascript" src="/resources/js/lunr.js?v=1.11.2.698593941358" defer></script>
+    <script id="prism-js" type="text/javascript" src="/resources/js/prism.js?v=1.11.2.698593941358" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -78,7 +79,7 @@
                     </div>
 
                     <input class="w-full h-10 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 placeholder-gray-400 dark:placeholder-dark-400"
-                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search docs" />
+                    style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search" />
                 </div>
 
                 <!-- Mobile search button mock -->
@@ -125,9 +126,10 @@
         <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
     </div>
 
+
     <div class="flex-shrink-0 mt-auto bg-transparent dark:border-dark-650">
         <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -162,8 +164,9 @@
                 </nav>
             </div>
 
+
             <a
-    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in"
+    class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by"
     target="_blank"
     href="https://retype.com/"
     rel="noopener"
@@ -217,7 +220,7 @@ GearBoot supports four different boot stages.</p>
 <p>If <strong>GearLock</strong> came pre-installed in your system then gearboot dir can be found at <code v-pre>/system/ghome</code><br>
 If it was a manual installation then it should be at <code v-pre>/data/ghome</code></p>
 <p>For most developers <code v-pre>boot-comp</code> stage should be fine and shouldn&#x27;t mess with other stages unless you know what you&#x27;re doing!</p>
-<p><strong>Use the <a href="../getting-started/#custom-core-package">custom-core</a> package to work with gearboot scripts</strong></p>
+<p><strong>Use the <a href="../getting-started#custom-core-package">custom-core</a> package to work with gearboot scripts</strong></p>
 <doc-anchor-target id="boot-stage-defination">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#boot-stage-defination">#</doc-anchor-trigger>
@@ -326,10 +329,10 @@ Example: gearboot s2 # For executing post-fs-data executables
     </h3>
 </doc-anchor-target>
 <ul>
-<li><a href="../developer-utilities/#gearprop">GearProp</a> can be useful while changing props during boot</li>
-<li>Check <strong><a href="../getting-started/#gearboot-executables">GearBoot Executables</a></strong> section in <a href="../getting-started/">GetStarted</a> page</li>
-<li>Take a look at <a href="../environment-variables/">environment variables</a></li>
-<li>Must check out <a href="../developer-utilities/">GearLock Dev Utilities</a></li>
+<li><a href="../developer-utilities#gearprop">GearProp</a> can be useful while changing props during boot</li>
+<li>Check <strong><a href="../getting-started#gearboot-executables">GearBoot Executables</a></strong> section in <a href="../getting-started">GetStarted</a> page</li>
+<li>Take a look at <a href="../environment-variables">environment variables</a></li>
+<li>Must check out <a href="../developer-utilities">GearLock Dev Utilities</a></li>
 </ul>
 
 
@@ -380,7 +383,7 @@ Example: gearboot s2 # For executing post-fs-data executables
 </ul>
 
     </div>
-    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>Copyright SupremeGamers 2021. All rights reserved.</p>
+    <div class="docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>Copyright SupremeGamers 2022. All rights reserved.</p>
 </div>
 </footer>
 
@@ -411,6 +414,6 @@ Example: gearboot s2 # For executing post-fs-data executables
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "GearBoot Documentation", icon: "file", hasPrism: true, hasMermaid: false }</script>
+        <script>window.__DOCS__ = { "title": "GearBoot Documentation", icon: "file", hasPrism: true, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>
