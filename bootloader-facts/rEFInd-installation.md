@@ -1,5 +1,5 @@
 ---
-title: 'rEFInd'
+title: 'rEFInd Installation'
 taxonomy:
     category:
         - docs
