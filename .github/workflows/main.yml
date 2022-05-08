@@ -16,10 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 5.0.x
-
       #- name: Clean existing retype branch
         #run: |
           #git push -d origin retype
@@ -42,8 +38,8 @@ jobs:
           } done
 
 
-      - uses: retypeapp/action-build@v1
+      - uses: retypeapp/action-build@latest
 
-      - uses: retypeapp/action-github-pages@v1
+      - uses: retypeapp/action-github-pages@latest
         with:
           update-branch: true
