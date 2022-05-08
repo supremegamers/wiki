@@ -1,7 +1,7 @@
 input: .
 output: .retype
 branding:
-  title: SupremeGamers
+  title: AOPC
   label: Wiki
 favicon: static/favicon.png
 cname: wiki.aopc.dev
