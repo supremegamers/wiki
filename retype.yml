@@ -4,14 +4,14 @@ branding:
   title: SupremeGamers
   label: Wiki
 favicon: static/favicon.png
-cname: wiki.supreme-gamers.com
+cname: wiki.aopc.dev
 edit:
   repo: https://github.com/supremegamers/wiki/edit/
 links:
   - text: Forum
-    link: https://supreme-gamers.com
+    link: https://aopc.dev
   - text: Discord
-    link: https://supreme-gamers.com/discord/invite
+    link: https://aopc.dev/discord/invite
   - text: Youtube
     link: https://www.youtube.com/c/SupremeGamers
 footer:
