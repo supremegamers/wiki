@@ -8,7 +8,7 @@ order: 0
 
 # Welcome to the AOPC Wiki!
 
-##### Exclusive to Android-x86 related topics
+##### Exclusive to Android on PC related topics
 
 ##### Here you can find very detailed guides for it, such as:
 
