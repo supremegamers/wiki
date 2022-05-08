@@ -6,7 +6,7 @@ icon: home
 order: 0
 ---
 
-# Welcome to the SupremeGamers Wiki!
+# Welcome to the AOPC Wiki!
 
 ##### Exclusive to Android-x86 related topics
 
