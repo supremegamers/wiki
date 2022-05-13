@@ -1,7 +1,7 @@
 ---
-title: SupremeGamers Wiki
+title: AOPC Wiki
 label: Welcome
-description: A wiki by the SupremeGamers community enriched with various guides and docs
+description: A wiki by the AOPC community enriched with various guides and docs
 icon: home
 order: 0
 ---
